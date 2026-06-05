@@ -1,66 +1,29 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Navbar from "@/components/Navbar/Navbar";
+import VideoSlider from "@/components/Home/VideoSlider/VideoSlider";
+import WhoWeAre from "@/components/Home/WhoWeAre/WhoWeAre";
+import MarketsWeServe from "@/components/Home/MarketsWeServe/MarketsWeServe";
+import Products from "@/components/Home/Products/Products";
+import Clients from "@/components/Home/Clients/Clients";
+import Testimonials from "@/components/Home/Testimonials/Testimonials";
+import OurValues from "@/components/Home/OurValues/OurValues";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.jsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div>
+      <Navbar /> 
+      <VideoSlider />
+      <WhoWeAre />
+      <MarketsWeServe />
+      <Products />
+      <Clients />
+      <Testimonials />
+      <OurValues />
+      <Footer />
     </div>
   );
 }
+export const metadata = {
+  title: "Parth Printing Technology | Packaging & Offset Print",
+  description: "High-precision commercial offset printing, custom mono cartons, corrugated packaging boxes, and rigid visual retail materials.",
+};
