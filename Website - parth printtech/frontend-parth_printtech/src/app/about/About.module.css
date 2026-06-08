@@ -1,14 +1,1 @@
-/* About page image-only styling: renders the provided PNG exactly. */
-
-.aboutImagePage {
-  min-height: 100vh;
-  width: 100%;
-  background: #ffffff;
-  overflow-x: hidden;
-}
-
-.aboutImage {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+/* Deprecated. Styles migrated to component-level modules in src/components/About */

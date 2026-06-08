@@ -44,24 +44,22 @@
 
 .title {
   font-family: var(--font-montserrat), system-ui, sans-serif;
-  font-size: 4.4rem; /* Prominent massive heading */
+  font-size: 5rem; /* Prominent massive heading */
   font-weight: 800;
   line-height: 1.05;
   color: #111;
   margin-bottom: 30px;
-  letter-spacing: -0.04em;
   text-transform: uppercase;
 }
 
 .outlinedText {
   color: #009fe3;
   position: relative;
-  font-family: var(--font-playfair), serif;
-  font-style: italic;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  padding: 0 10px;
-  text-transform: none;
+  letter-spacing: -.2rem;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .description {

@@ -243,9 +243,6 @@ const MarketsWeServe = () => {
       <div className={`${styles.container} markets-section-reveal`}>
         {/* Section Header */}
         <div className={styles.header}>
-          <span className={styles.subtitle}>
-            <span className={styles.blueDot}></span> INDUSTRIES WE SERVE
-          </span>
           <h2 className={styles.title}>
             Markets We <span className={styles.outlinedText}>Serve</span>
           </h2>

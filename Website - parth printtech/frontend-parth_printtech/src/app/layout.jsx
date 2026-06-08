@@ -1,5 +1,6 @@
 import { Plus_Jakarta_Sans, Geist_Mono, Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import BackgroundAnimation from "@/components/BackgroundAnimation/BackgroundAnimation";
 
 // Using Plus Jakarta Sans for a highly professional body font
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -36,7 +37,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${plusJakartaSans.variable} ${geistMono.variable} ${outfit.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+      <body>
+        <BackgroundAnimation />
+        {children}
+      </body>
     </html>
   );
 }
+

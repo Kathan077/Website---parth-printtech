@@ -99,12 +99,11 @@
 .outlinedText {
   color: #009fe3;
   position: relative;
-  font-family: var(--font-playfair), serif;
-  font-style: italic;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  padding: 0 10px;
-  text-transform: none;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
 }
 
 .description {

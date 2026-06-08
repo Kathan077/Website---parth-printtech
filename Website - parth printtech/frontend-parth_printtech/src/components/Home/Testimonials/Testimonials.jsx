@@ -95,9 +95,6 @@ const Testimonials = () => {
       <div className={styles.container}>
         {/* Section Header */}
         <div className={styles.header}>
-          <span className={styles.subtitle}>
-            <span className={styles.blueDot}></span> CLIENT SUCCESS
-          </span>
           <h2 className={styles.title}>
             What Our Partners <span className={styles.outlinedText}>Say</span>
           </h2>
@@ -132,7 +129,7 @@ const Testimonials = () => {
                       ))}
                     </div>
                   </div>
-                  <p className={styles.quote}>"{item.quote}"</p>
+                  <p className={styles.quote}>&quot;{item.quote}&quot;</p>
                   <div className={styles.cmykCorner}>
                     <span className={styles.dotCyan}></span>
                     <span className={styles.dotMagenta}></span>
@@ -162,7 +159,7 @@ const Testimonials = () => {
                       ))}
                     </div>
                   </div>
-                  <p className={styles.quote}>"{item.quote}"</p>
+                  <p className={styles.quote}>&quot;{item.quote}&quot;</p>
                   <div className={styles.cmykCorner}>
                     <span className={styles.dotCyan}></span>
                     <span className={styles.dotMagenta}></span>
@@ -196,7 +193,7 @@ const Testimonials = () => {
                       ))}
                     </div>
                   </div>
-                  <p className={styles.quote}>"{item.quote}"</p>
+                  <p className={styles.quote}>&quot;{item.quote}&quot;</p>
                   <div className={styles.cmykCorner}>
                     <span className={styles.dotCyan}></span>
                     <span className={styles.dotMagenta}></span>
@@ -226,7 +223,7 @@ const Testimonials = () => {
                       ))}
                     </div>
                   </div>
-                  <p className={styles.quote}>"{item.quote}"</p>
+                  <p className={styles.quote}>&quot;{item.quote}&quot;</p>
                   <div className={styles.cmykCorner}>
                     <span className={styles.dotCyan}></span>
                     <span className={styles.dotMagenta}></span>

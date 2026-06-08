@@ -76,7 +76,7 @@
 }
 
 .logoParth {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: Rockwell, "Rockwell Nova", "Roboto Slab", serif;
   font-size: 1.8rem; /* Scaled up */
   font-weight: 900;
   color: #009fe3;
@@ -85,7 +85,7 @@
 }
 
 .logoPrinttech {
-  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.05rem; /* Scaled up */
   font-weight: 600;
   color: #6e5b53;

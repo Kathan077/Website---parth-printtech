@@ -116,9 +116,7 @@ const OurValues = () => {
       <div className={styles.container}>
         {/* Section Header */}
         <div className={styles.header}>
-          <span className={`${styles.subtitle} value-header-reveal`}>
-            <span className={styles.blueDot}></span> CORE PRINCIPLES
-          </span>
+    
           <h2 className={`${styles.title} value-header-reveal`}>
             Our Values Shape <span className={styles.outlinedText}>Excellence</span>
           </h2>

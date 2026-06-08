@@ -1,0 +1,361 @@
+.heroSection {
+  background-color: #fcfdfe;
+  padding: 180px 40px 120px 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.1; /* Faint motion background, visible but subtle */
+}
+
+/* Blueprint drafting line background */
+.blueprintOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background-image: 
+    linear-gradient(to right, rgba(0, 159, 227, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 159, 227, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.gridLineX {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px dashed rgba(0, 159, 227, 0.08);
+}
+
+.gridLineY {
+  position: absolute;
+  left: 60%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  border-left: 1px dashed rgba(0, 159, 227, 0.08);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contentBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #6c757d;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.blueDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #009fe3;
+  box-shadow: 0 0 12px rgba(0, 159, 227, 0.6);
+}
+
+.title {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 4.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.accentText {
+  color: #009fe3;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.25rem;
+  color: #495057;
+  line-height: 1.75;
+  max-width: 620px;
+  margin-bottom: 40px;
+}
+
+/* CTA Button Styling */
+.ctaWrapper {
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #009fe3;
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 14px;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow: 0 12px 30px rgba(0, 159, 227, 0.2);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.ctaButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 159, 227, 0.35);
+  background-color: #0088c4;
+}
+
+.btnIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .btnIcon {
+  transform: translateX(4px);
+}
+
+/* Staggered Collage Block */
+.collageBlock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.collageContainer {
+  position: relative;
+  width: 460px;
+  height: 520px;
+}
+
+/* Alignment marks (+ markers) */
+.alignMark {
+  position: absolute;
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #009fe3;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.markTL { top: -15px; left: -15px; }
+.markTR { top: -15px; right: -15px; }
+.markBL { bottom: -15px; left: -15px; }
+.markBR { bottom: -15px; right: -15px; }
+
+.collageCard {
+  position: absolute;
+  border-radius: 12px;
+  overflow: visible;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.collageImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Structural Wireframe outlines (packaging lines mockup) */
+.wireframeBorder {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 1px dashed rgba(0, 159, 227, 0.25);
+  border-radius: 16px;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.wireframeBorder::before, .wireframeBorder::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #009fe3;
+}
+
+.wireframeBorder::before {
+  top: -4px;
+  left: -4px;
+}
+
+.wireframeBorder::after {
+  bottom: -4px;
+  right: -4px;
+}
+
+.blueprintCode {
+  position: absolute;
+  bottom: -22px;
+  right: 4px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.7rem;
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
+/* Collage Positions */
+.primaryCard {
+  top: 60px;
+  left: 20px;
+  width: 280px;
+  height: 380px;
+  z-index: 2;
+}
+
+.secondaryCard {
+  top: 0px;
+  right: 0px;
+  width: 180px;
+  height: 220px;
+  z-index: 3;
+}
+
+.tertiaryCard {
+  bottom: 0px;
+  left: 180px;
+  width: 200px;
+  height: 200px;
+  z-index: 4;
+}
+
+/* Hover effects: highlight structural blueprints */
+.collageCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  z-index: 5;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.collageCard:hover .wireframeBorder {
+  border: 1px solid #009fe3;
+  box-shadow: 0 0 10px rgba(0, 159, 227, 0.15);
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 3.8rem;
+  }
+  .collageContainer {
+    width: 400px;
+    height: 480px;
+  }
+  .primaryCard {
+    width: 240px;
+    height: 330px;
+  }
+  .secondaryCard {
+    width: 160px;
+    height: 200px;
+  }
+  .tertiaryCard {
+    width: 180px;
+    height: 180px;
+    left: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+  .description {
+    max-width: 100%;
+  }
+  .collageBlock {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 120px 20px 80px 20px;
+  }
+  .title {
+    font-size: 2.6rem;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+  .statsGrid {
+    gap: 30px;
+  }
+  .statVal {
+    font-size: 2.3rem;
+  }
+  .collageContainer {
+    width: 320px;
+    height: 380px;
+  }
+  .primaryCard {
+    width: 190px;
+    height: 260px;
+    top: 50px;
+    left: 10px;
+  }
+  .secondaryCard {
+    width: 130px;
+    height: 160px;
+  }
+  .tertiaryCard {
+    width: 140px;
+    height: 140px;
+    left: 120px;
+  }
+}

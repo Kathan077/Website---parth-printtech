@@ -47,3 +47,37 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Premium Translucency for Background Animation */
+section,
+footer,
+section[class*="section" i],
+section[class*="hero" i],
+footer[class*="footer" i],
+section[class*="process" i],
+section[class*="apply" i],
+section[class*="values" i],
+section[class*="culture" i],
+section[class*="reach" i],
+main[class*="mainContainer" i] {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  transition: background-color 0.4s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  section,
+  footer,
+  section[class*="section" i],
+  section[class*="hero" i],
+  footer[class*="footer" i],
+  section[class*="process" i],
+  section[class*="apply" i],
+  section[class*="values" i],
+  section[class*="culture" i],
+  section[class*="reach" i],
+  main[class*="mainContainer" i] {
+    background-color: rgba(10, 10, 10, 0.85) !important;
+  }
+}
+
+

@@ -52,48 +52,6 @@ const productsData = [
       { label: "Print Tech", value: "High-Res Direct UV" },
       { label: "Assembly", value: "Flat-Pack / Toolless" }
     ]
-  },
-  {
-    id: "04",
-    category: "Pouches & Wraps",
-    title: "Flexible Packaging",
-    description: "Our food-grade stand-up pouches and barrier wraps feature multilayer PET, MET-PET, and PE laminates. Engineered with oxygen and moisture barriers, tear notches, and resealable zippers to keep contents fresh and secure.",
-    image: "/images/products/flexible_pouches.png",
-    accentColor: "#4caf50",
-    specs: [
-      { label: "Structure", value: "PET / MET-PET / PE Laminate" },
-      { label: "Barrier", value: "High Moisture & O2 Shield" },
-      { label: "Style", value: "Stand-Up Zipper / Gusset" },
-      { label: "Features", value: "Tear Notch, Degassing Valve" }
-    ]
-  },
-  {
-    id: "05",
-    category: "Stickers & Labels",
-    title: "Product Label Rolls",
-    description: "Engineered for high-speed automated production lines, our self-adhesive label rolls offer outstanding print clarity. Resistant to moisture, oil, and tearing, they are ideal for cosmetic jars, squeeze bottles, and chemical containers.",
-    image: "/images/products/product_labels.png",
-    accentColor: "#2196f3",
-    specs: [
-      { label: "Substrate", value: "Chrome / Clear PP / Foil" },
-      { label: "Adhesive", value: "Permanent / Removable" },
-      { label: "Print Tech", value: "Flexo Roll / Digital UV" },
-      { label: "Resistance", value: "Water, Oil, Scratch Proof" }
-    ]
-  },
-  {
-    id: "06",
-    category: "Luxury Packaging",
-    title: "Luxury Rigid Boxes",
-    description: "Elevate your premium product gifting experience with our rigid set-up boxes. Constructed from heavy-duty greyboard wrapped in imported textured papers, they feature magnetic flip lids, embossed hot foil, and custom-formed EVA foam inserts.",
-    image: "/images/products/luxury_gift_boxes.png",
-    accentColor: "#9c27b0",
-    specs: [
-      { label: "Core Board", value: "1.5mm - 3.0mm Greyboard" },
-      { label: "Outer Wrap", value: "Specialty Textured Paper" },
-      { label: "Insert Type", value: "Custom EVA / Velvet Satin" },
-      { label: "Closure", value: "Magnetic Flip / Ribbon Tie" }
-    ]
   }
 ];
 
@@ -213,9 +171,6 @@ const Products = () => {
       <div className={styles.container}>
         {/* Section Header */}
         <div className={styles.header}>
-          <span className={`${styles.subtitle} product-header-reveal`}>
-            <span className={styles.blueDot}></span> PRODUCT SHOWCASE
-          </span>
           <h2 className={`${styles.title} product-header-reveal`}>
             Engineered Print <span className={styles.outlinedText}>Solutions</span>
           </h2>

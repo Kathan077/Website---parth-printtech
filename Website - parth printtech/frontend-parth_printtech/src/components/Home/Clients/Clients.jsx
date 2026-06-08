@@ -161,9 +161,7 @@ const Clients = () => {
         
         {/* Left Side: Title & Description (Clean B2B copy, no button) */}
         <div className={`${styles.contentSide} clients-reveal`}>
-          <span className={styles.subtitle}>
-            <span className={styles.blueDot}></span> GLOBAL PARTNERSHIPS
-          </span>
+          
           <h2 className={styles.title}>
             Trusted by the <span className={styles.outlinedText}>Industry Leaders</span>
           </h2>
