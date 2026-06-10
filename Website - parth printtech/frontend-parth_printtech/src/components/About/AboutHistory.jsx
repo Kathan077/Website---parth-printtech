@@ -266,7 +266,7 @@ const AboutHistory = () => {
       </div>
 
       <div className={styles.container}>
-        
+
         {/* Header */}
         <div className={styles.header}>
           <h2 className={`${styles.title} history-header-reveal`}>

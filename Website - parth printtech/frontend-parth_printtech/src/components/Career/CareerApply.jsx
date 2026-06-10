@@ -92,7 +92,7 @@ const CareerApply = ({ selectedRole = "", onChangeRole }) => {
               </div>
               <div className={styles.infoText}>
                 <span className={styles.infoLabel}>Office</span>
-                <span className={styles.infoValue}>Plot No. 124, G.I.D.C., Phase-1, Gujarat, India</span>
+                <span className={styles.infoValue}>47/8, G.I.D.C., Kalol - 382725 (N.G.), Dist. Gandhinagar, Gujarat, India</span>
               </div>
             </div>
             <div className={styles.infoItem}>
@@ -103,7 +103,7 @@ const CareerApply = ({ selectedRole = "", onChangeRole }) => {
               </div>
               <div className={styles.infoText}>
                 <span className={styles.infoLabel}>Phone</span>
-                <span className={styles.infoValue}>+91 98765 43210</span>
+                <span className={styles.infoValue}>+91 99788 88056</span>
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@ const CareerApply = ({ selectedRole = "", onChangeRole }) => {
                 <div className={styles.fieldRow}>
                   <div className={styles.fieldGroup}>
                     <label className={styles.fieldLabel} htmlFor="career-phone">Phone</label>
-                    <input id="career-phone" className={styles.fieldInput} type="tel" placeholder="+91 98765 43210" />
+                    <input id="career-phone" className={styles.fieldInput} type="tel" placeholder="+91 99788 88056" />
                   </div>
                   <div className={styles.fieldGroup}>
                     <label className={styles.fieldLabel} htmlFor="career-experience">Experience</label>

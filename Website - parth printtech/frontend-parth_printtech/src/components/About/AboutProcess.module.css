@@ -1,5 +1,5 @@
 .section {
-  background-color: #f8fafc;
+  background-color: #ffffff;
   padding: 120px 40px;
   overflow: hidden;
   position: relative;
@@ -146,9 +146,9 @@
 
 .activeTab {
   color: #ffffff !important;
-  background-color: #009fe3 !important;
-  border-color: #009fe3 !important;
-  box-shadow: 0 8px 20px rgba(0, 159, 227, 0.15);
+  background-color: var(--step-accent) !important;
+  border-color: var(--step-accent) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .tabNum {
@@ -171,7 +171,7 @@
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #009fe3;
+  color: var(--step-accent);
   letter-spacing: 0.1em;
   margin-bottom: 15px;
 }
@@ -201,7 +201,7 @@
 }
 
 .specBox {
-  border-left: 3.5px solid #009fe3;
+  border-left: 3.5px solid var(--step-accent);
   padding-left: 18px;
   display: flex;
   flex-direction: column;
@@ -227,9 +227,10 @@
 .viewportConsole {
   background-color: #ffffff;
   border-radius: 16px;
-  border: 1px solid rgba(0, 159, 227, 0.1);
+  border: 1.5px solid var(--step-accent);
   box-shadow: 0 20px 40px rgba(0, 159, 227, 0.04);
   overflow: hidden;
+  transition: border-color 0.4s ease;
 }
 
 .consoleHeader {

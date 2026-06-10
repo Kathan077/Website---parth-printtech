@@ -5,6 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./AboutProcess.module.css";
 
+const stepAccents = ["#009fe3", "#e02424", "#10b981", "#eab308"];
+
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -245,7 +247,7 @@ const AboutProcess = () => {
   }, [activeStep]);
 
   return (
-    <section ref={containerRef} className={`${styles.section} process-section-trigger`}>
+    <section ref={containerRef} className={`${styles.section} process-section-trigger`} style={{ "--step-accent": stepAccents[activeStep] }}>
       {/* Blueprint grid pattern backdrop */}
       <div className={styles.blueprintOverlay}>
         <div className={styles.gridLineX}></div>
@@ -263,9 +265,6 @@ const AboutProcess = () => {
       <div className={styles.container}>
         {/* Header */}
         <div className={styles.header}>
-          <span className={`${styles.subtitle} process-header-reveal`}>
-            <span className={styles.blueDot}></span> TECHNICAL WORKFLOW
-          </span>
           <h2 className={`${styles.title} process-header-reveal`}>
             The Journey From <span className={styles.accentText}>Dieline to Detail</span>
           </h2>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
@@ -14,27 +14,8 @@ const ProductDetailPage = () => {
   const params = useParams();
   const router = useRouter();
   const containerRef = useRef(null);
-  const [selectedPlate, setSelectedPlate] = useState("All");
 
   const product = productsData.find((p) => p.id === params.id);
-
-  const plates = [
-    { key: "All", label: "CMYK (Full Color)", styleClass: styles.cmykAll },
-    { key: "C", label: "C (Cyan)", styleClass: styles.cmykC },
-    { key: "M", label: "M (Magenta)", styleClass: styles.cmykM },
-    { key: "Y", label: "Y (Yellow)", styleClass: styles.cmykY },
-    { key: "K", label: "K (Key/Black)", styleClass: styles.cmykK },
-  ];
-
-  const getFilterClass = () => {
-    switch (selectedPlate) {
-      case "C": return styles.filterC;
-      case "M": return styles.filterM;
-      case "Y": return styles.filterY;
-      case "K": return styles.filterK;
-      default: return styles.filterAll;
-    }
-  };
 
   useEffect(() => {
     if (product) {
@@ -97,7 +78,7 @@ const ProductDetailPage = () => {
           {/* Back button */}
           <div className="detail-reveal" style={{ marginBottom: "40px" }}>
             <Link href="/products" className={styles.filterBtn} style={{ textDecoration: "none" }}>
-              ← Back to Catalog
+              ← Back
             </Link>
           </div>
 
@@ -121,7 +102,7 @@ const ProductDetailPage = () => {
                       src={product.image}
                       alt={product.title}
                       fill
-                      className={`${styles.productImage} ${getFilterClass()}`}
+                      className={styles.productImage}
                       priority
                       onError={(e) => {
                         e.target.src = "data:image/svg+xml;utf8,<svg viewBox='0 0 400 300' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' fill='%23fafbfc'/><text x='50%' y='50%' font-family='sans-serif' font-size='16' fill='%236c757d' text-anchor='middle'>PARTH PRINTTECH</text></svg>";
@@ -130,22 +111,6 @@ const ProductDetailPage = () => {
                   </div>
                 </div>
 
-                {/* CMYK Interactive Plates Selector */}
-                <div style={{ marginTop: "25px" }}>
-                  <span className={styles.cmykLabel}>SIMULATE PRINT PLATE SEPARATION (CMYK)</span>
-                  <div className={styles.cmykSelector}>
-                    {plates.map((plate) => (
-                      <button
-                        key={plate.key}
-                        onClick={() => setSelectedPlate(plate.key)}
-                        className={`${styles.cmykPlateBtn} ${selectedPlate === plate.key ? `${styles.cmykPlateBtnActive} ${plate.styleClass}` : ""}`}
-                      >
-                        <span className={styles.cmykIndicatorDot}></span>
-                        {plate.key}
-                      </button>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
 

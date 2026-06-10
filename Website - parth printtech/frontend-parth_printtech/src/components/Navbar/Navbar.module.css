@@ -7,7 +7,8 @@
     padding: 20px 40px;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     background: transparent;
-    pointer-events: none; /* Allows clicking through the empty space around the pill */
+    pointer-events: none;
+    /* Allows clicking through the empty space around the pill */
 }
 
 .navbarInner {
@@ -23,7 +24,8 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    pointer-events: auto; /* Re-enable pointer events for the actual nav */
+    pointer-events: auto;
+    /* Re-enable pointer events for the actual nav */
 }
 
 /* --- SCROLLED STATE (The Pill) --- */
@@ -38,7 +40,8 @@
     -webkit-backdrop-filter: blur(25px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 100px; /* Fully rounded pill */
+    border-radius: 100px;
+    /* Fully rounded pill */
     padding: 0 30px;
 }
 
@@ -71,8 +74,10 @@
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    width: 36px; /* 2x container width to maintain 1:1 aspect ratio and crop out bottom text */
-    height: 36px; /* 2x container height */
+    width: 36px;
+    /* 2x container width to maintain 1:1 aspect ratio and crop out bottom text */
+    height: 36px;
+    /* 2x container height */
     object-fit: cover;
     object-position: top;
     display: block;
@@ -279,12 +284,14 @@
     }
 
     .buttonContainer {
-        display: none; /* Hide desktop contact button */
+        display: none;
+        /* Hide desktop contact button */
     }
 
     .navbarInner {
         padding: 0 24px;
-        height: 75px; /* Slightly shorter navbar height on mobile */
+        height: 75px;
+        /* Slightly shorter navbar height on mobile */
     }
 
     .navLinks {
@@ -341,16 +348,31 @@
 }
 
 @media (max-width: 768px) {
-    .navbarWrapper { padding: 15px 20px; }
-    .scrolled { padding: 10px 20px; }
-    .logoParth { font-size: 1.1rem; }
-    .logoPrinttech { font-size: 0.7rem; }
+    .navbarWrapper {
+        padding: 15px 20px;
+    }
+
+    .scrolled {
+        padding: 10px 20px;
+    }
+
+    .logoParth {
+        font-size: 1.1rem;
+    }
+
+    .logoPrinttech {
+        font-size: 0.7rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .logoParth { font-size: 1.05rem; }
-    .logoPrinttech { 
+    .logoParth {
+        font-size: 1.05rem;
+    }
+
+    .logoPrinttech {
         font-size: 0.65rem;
-        display: block !important; /* Force display on mobile */
+        display: block !important;
+        /* Force display on mobile */
     }
 }

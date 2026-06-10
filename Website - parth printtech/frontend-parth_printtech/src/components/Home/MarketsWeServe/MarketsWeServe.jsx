@@ -208,7 +208,7 @@ const MarketsWeServe = () => {
           duration: 1.2,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: ".markets-trigger-section",
+            trigger: containerRef.current,
             start: "top 80%",
           },
         }
@@ -240,6 +240,12 @@ const MarketsWeServe = () => {
 
   return (
     <section ref={containerRef} className={`${styles.section} markets-trigger-section`}>
+      {/* Interactive Background Graphics */}
+      <div className={styles.interactiveBg}>
+        <div className={`${styles.floatShape} ${styles.shape1}`}></div>
+        <div className={`${styles.floatShape} ${styles.shape2}`}></div>
+        <div className={`${styles.floatShape} ${styles.shape3}`}></div>
+      </div>
       <div className={`${styles.container} markets-section-reveal`}>
         {/* Section Header */}
         <div className={styles.header}>

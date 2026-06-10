@@ -71,7 +71,7 @@ const Products = () => {
           stagger: 0.15,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: ".product-trigger-section",
+            trigger: containerRef.current,
             start: "top 85%",
           },
         }
@@ -162,11 +162,19 @@ const Products = () => {
 
     }, containerRef);
 
-    return () => {};
+    return () => {
+      ctx.revert();
+    };
   }, []);
 
   return (
     <section ref={containerRef} className={`${styles.section} product-trigger-section`}>
+      {/* Interactive Background Graphics */}
+      <div className={styles.interactiveBg}>
+        <div className={`${styles.floatShape} ${styles.shape1} print-mark-rotate`}></div>
+        <div className={`${styles.floatShape} ${styles.shape2}`}></div>
+        <div className={`${styles.floatShape} ${styles.shape3}`}></div>
+      </div>
 
       <div className={styles.container}>
         {/* Section Header */}

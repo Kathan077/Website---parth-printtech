@@ -14,7 +14,8 @@
   object-fit: cover;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.1; /* Faint motion background, visible but subtle */
+  opacity: 0.1;
+  /* Faint motion background, visible but subtle */
 }
 
 /* Blueprint drafting line background */
@@ -26,7 +27,7 @@
   height: 100%;
   pointer-events: none;
   z-index: 1;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(0, 159, 227, 0.02) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 159, 227, 0.02) 1px, transparent 1px);
   background-size: 40px 40px;
@@ -182,10 +183,25 @@
   pointer-events: none;
 }
 
-.markTL { top: -15px; left: -15px; }
-.markTR { top: -15px; right: -15px; }
-.markBL { bottom: -15px; left: -15px; }
-.markBR { bottom: -15px; right: -15px; }
+.markTL {
+  top: -15px;
+  left: -15px;
+}
+
+.markTR {
+  top: -15px;
+  right: -15px;
+}
+
+.markBL {
+  bottom: -15px;
+  left: -15px;
+}
+
+.markBR {
+  bottom: -15px;
+  right: -15px;
+}
 
 .collageCard {
   position: absolute;
@@ -217,7 +233,8 @@
   transition: all 0.5s ease;
 }
 
-.wireframeBorder::before, .wireframeBorder::after {
+.wireframeBorder::before,
+.wireframeBorder::after {
   content: "";
   position: absolute;
   width: 8px;
@@ -288,18 +305,22 @@
   .title {
     font-size: 3.8rem;
   }
+
   .collageContainer {
     width: 400px;
     height: 480px;
   }
+
   .primaryCard {
     width: 240px;
     height: 330px;
   }
+
   .secondaryCard {
     width: 160px;
     height: 200px;
   }
+
   .tertiaryCard {
     width: 180px;
     height: 180px;
@@ -312,12 +333,15 @@
     grid-template-columns: 1fr;
     gap: 80px;
   }
+
   .title {
     font-size: 3.5rem;
   }
+
   .description {
     max-width: 100%;
   }
+
   .collageBlock {
     margin-top: 20px;
   }
@@ -327,32 +351,40 @@
   .heroSection {
     padding: 120px 20px 80px 20px;
   }
+
   .title {
     font-size: 2.6rem;
   }
+
   .description {
     font-size: 1.1rem;
   }
+
   .statsGrid {
     gap: 30px;
   }
+
   .statVal {
     font-size: 2.3rem;
   }
+
   .collageContainer {
     width: 320px;
     height: 380px;
   }
+
   .primaryCard {
     width: 190px;
     height: 260px;
     top: 50px;
     left: 10px;
   }
+
   .secondaryCard {
     width: 130px;
     height: 160px;
   }
+
   .tertiaryCard {
     width: 140px;
     height: 140px;

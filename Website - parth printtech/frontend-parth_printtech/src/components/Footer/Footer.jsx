@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -9,10 +10,10 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        
+
         {/* Main Grid */}
         <div className={styles.grid}>
-          
+
           {/* Column 1: Brand details with Logo image */}
           <div className={styles.brandCol}>
             <div className={styles.logoWrapper}>
@@ -62,7 +63,7 @@ const Footer = () => {
                 <Link href="/career" className={styles.link}>Careers</Link>
               </li>
               <li>
-                <Link href="/contact" className={styles.link}>Contact</Link>
+                <Link href="/contact" className={styles.link}>Talk to Us</Link>
               </li>
             </ul>
           </div>
@@ -81,7 +82,7 @@ const Footer = () => {
                 <span className={styles.staticLink}>Rigid Luxury Boxes</span>
               </li>
               <li>
-                <span className={styles.staticLink}>Product Labels & Rolls</span>
+                <span className={styles.staticLink}>PVC, PETG, BOPP & HTL Labels</span>
               </li>
               <li>
                 <span className={styles.staticLink}>Flexible Packaging Pouches</span>
@@ -97,7 +98,7 @@ const Footer = () => {
                 <svg className={styles.contactIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
-                <a href="tel:+919876543210" className={styles.contactLink}>+91 98765 43210</a>
+                <a href="tel:+919978888056" className={styles.contactLink}>+91 99788 88056</a>
               </li>
               <li className={styles.contactItem}>
                 <svg className={styles.contactIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -112,7 +113,7 @@ const Footer = () => {
                   <circle cx="12" cy="10" r="3" />
                 </svg>
                 <span className={styles.contactText}>
-                  Plot No. 124, Industrial Area, Phase-1, G.I.D.C., Gujarat, India
+                  47/8, G.I.D.C., Kalol - 382725 (N.G.), Dist. Gandhinagar, Gujarat, India
                 </span>
               </li>
             </ul>
@@ -132,6 +133,8 @@ const Footer = () => {
             <Link href="/privacy" className={styles.bottomLink}>Privacy Policy</Link>
             <span className={styles.bullet}>•</span>
             <Link href="/terms" className={styles.bottomLink}>Terms of Service</Link>
+            <span className={styles.bullet}>•</span>
+            <a href="https://sanmora.in" target="_blank" rel="noopener noreferrer" className={styles.bottomLink}>Developed by sanmora.in</a>
           </div>
         </div>
 

@@ -83,7 +83,7 @@ const OurValues = () => {
           stagger: 0.15,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: ".value-section-trigger",
+            trigger: containerRef.current,
             start: "top 85%",
           },
         }
@@ -113,6 +113,12 @@ const OurValues = () => {
 
   return (
     <section ref={containerRef} className={`${styles.section} value-section-trigger`}>
+      {/* Interactive Background Graphics */}
+      <div className={styles.interactiveBg}>
+        <div className={`${styles.floatShape} ${styles.shape1}`}></div>
+        <div className={`${styles.floatShape} ${styles.shape2}`}></div>
+        <div className={`${styles.floatShape} ${styles.shape3}`}></div>
+      </div>
       <div className={styles.container}>
         {/* Section Header */}
         <div className={styles.header}>

@@ -11,7 +11,7 @@ import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <div>
-      <Navbar /> 
+      <Navbar />
       <VideoSlider />
       <WhoWeAre />
       <MarketsWeServe />

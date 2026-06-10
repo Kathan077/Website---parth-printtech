@@ -99,7 +99,7 @@
 
 .infoCardsGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
 }
 
@@ -148,7 +148,10 @@
   color: #0f172a;
   text-decoration: none;
   transition: color 0.3s ease;
-  word-break: break-all;
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .cardLink:hover {
@@ -538,5 +541,23 @@
   .trustBadges {
     flex-wrap: wrap;
     gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .infoCardsGrid {
+    grid-template-columns: 1fr;
+  }
+  .cardLink {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoCard {
+    padding: 24px 16px;
+  }
+  .cardLink {
+    font-size: 0.98rem;
   }
 }

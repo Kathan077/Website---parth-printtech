@@ -129,7 +129,7 @@ const ContactPage = () => {
                     <h3 className={styles.cardTitle}>Email Us</h3>
                   </div>
                   <a href="mailto:info@parthprinttech.com" className={styles.cardLink}>
-                    info@parthprinttech.com
+                    info@<wbr />parthprinttech.com
                   </a>
                   <p className={styles.cardHint}>Click to open mail client</p>
                 </div>
@@ -142,8 +142,8 @@ const ContactPage = () => {
                     </svg>
                     <h3 className={styles.cardTitle}>Call Us</h3>
                   </div>
-                  <a href="tel:+919876543210" className={styles.cardLink}>
-                    +91 98765 43210
+                  <a href="tel:+919978888056" className={styles.cardLink}>
+                    +91 99788 88056
                   </a>
                   <p className={styles.cardHint}>Mon - Sat, 9am - 7pm IST</p>
                 </div>
@@ -172,16 +172,16 @@ const ContactPage = () => {
                     <span className={styles.mapDot}></span>
                   </div>
                   <div className={styles.mapDetailsText}>
-                    <span className={styles.mapCity}>AHMEDABAD</span>
-                    <span className={styles.mapState}>Gujarat, India</span>
+                    <span className={styles.mapCity}>KALOL</span>
+                    <span className={styles.mapState}>Gandhinagar, Gujarat</span>
                   </div>
                 </div>
                 <div className={styles.mapCardFooter}>
                   <p className={styles.mapAddress}>
-                    Plot No. 124, G.I.D.C. Industrial Estate, Ahmedabad, Gujarat, India.
+                    47/8, G.I.D.C., Kalol - 382725 (N.G.), Dist. Gandhinagar, Gujarat, India.
                   </p>
                   <a 
-                    href="https://maps.google.com/?q=GIDC+Industrial+Estate+Ahmedabad+Gujarat" 
+                    href="https://maps.google.com/?q=GIDC+Kalol+Gandhinagar+Gujarat+India" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className={styles.mapLink}

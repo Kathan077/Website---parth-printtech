@@ -99,12 +99,12 @@
 
 /* Upward moving track */
 .trackUp {
-  animation: scrollUpY 22s linear infinite;
+  animation: scrollUpY 12s linear infinite;
 }
 
 /* Downward moving track */
 .trackDown {
-  animation: scrollDownY 22s linear infinite;
+  animation: scrollDownY 12s linear infinite;
 }
 
 /* Pause animations on hover of the section grid */

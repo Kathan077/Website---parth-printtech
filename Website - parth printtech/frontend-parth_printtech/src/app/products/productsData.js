@@ -64,19 +64,19 @@ export const productsData = [
     num: "04",
     category: "Luxury & Labels",
     title: "Premium Product Labels",
-    description: "High-speed roll-fed self-adhesive labels and die-cut product stickers with custom gloss or matte finishes, optimized for high-speed labeling lines.",
+    description: "High-speed roll-fed self-adhesive labels, wrap-arounds, and shrink sleeves including PVC, PETG, BOPP, and Heat Transfer Labels (HTL).",
     image: "/images/products/product_labels.png",
     accentColor: "#009fe3",
     dim: "Custom Roll / Die-cut",
     regMark: "REG-PL-04",
-    detailedDescription: "High-fidelity roll labels designed for automated application machinery. Printed on premium water-proof polypropylene, vinyl, or semi-gloss paper substrates, these labels are coated with permanent acrylic adhesives. Optional hot foil borders, spot UV textures, and glossy top laminations ensure they resist friction, moisture, and temperature fluctuations on retail shelves.",
+    detailedDescription: "High-fidelity roll labels and shrink sleeves custom-engineered for automated product packaging. We manufacture premium PVC shrink labels, PETG labels, BOPP wrap-around labels, and Heat Transfer Labels (HTL) with permanent or clean-peel adhesives. Ideal for beverages, cosmetics, personal care, pharmaceuticals, and household products requiring excellent heat, water, and scuff resistance.",
     specs: [
-      { label: "Material Film", value: "Glossy Polypropylene / Paper" },
-      { label: "Surface Finish", value: "UV Varnish Coating" },
-      { label: "Delivery Format", value: "Roll-fed / Sheet-fed" },
-      { label: "Adhesive Type", value: "Permanent Acrylic" },
+      { label: "Label Materials", value: "PVC / PETG / BOPP / HTL Film" },
+      { label: "Print Process", value: "Rotogravure / Flexo / Offset" },
+      { label: "Application Tech", value: "Shrink Sleeve / Wrap-around" },
+      { label: "Adhesive Type", value: "Acrylic Hot Melt / Heat Fusion" },
       { label: "Core Dimensions", value: "3-inch (76mm) Standard Core" },
-      { label: "Shape Styles", value: "Square / Oval / Custom Die-cut" }
+      { label: "Shape Styles", value: "Sleeves / Rolls / Custom Shapes" }
     ]
   },
   {

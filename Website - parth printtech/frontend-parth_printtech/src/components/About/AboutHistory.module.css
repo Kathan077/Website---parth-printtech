@@ -22,7 +22,7 @@
   height: 100%;
   pointer-events: none;
   z-index: 1;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(0, 159, 227, 0.02) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 159, 227, 0.02) 1px, transparent 1px);
   background-size: 40px 40px;
@@ -202,7 +202,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
   transform-style: preserve-3d;
   transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-  transition: 
+  transition:
     background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
     border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
     box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
@@ -243,7 +243,7 @@
   border-radius: 5px 5px 0 0;
   transform-origin: bottom center;
   transform: rotateX(-45deg);
-  transition: 
+  transition:
     transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
     border-color 0.4s ease;
 }
@@ -359,18 +359,24 @@
     left: 20px;
     transform: none;
   }
+
   .timelineNode {
     left: 20px;
   }
+
   .card3DContainer {
     width: calc(100% - 60px);
     margin-left: 60px;
   }
-  .leftSide, .rightSide {
+
+  .leftSide,
+  .rightSide {
     justify-content: flex-start;
   }
+
   .connectorLine {
-    display: none; /* Hide complex connectors on mobile */
+    display: none;
+    /* Hide complex connectors on mobile */
   }
 }
 
@@ -378,12 +384,15 @@
   .section {
     padding: 80px 20px;
   }
+
   .title {
     font-size: 2.2rem;
   }
+
   .timelineCard {
     padding: 30px;
   }
+
   .year {
     font-size: 1.8rem;
   }

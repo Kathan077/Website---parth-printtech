@@ -65,6 +65,7 @@ main[class*="mainContainer" i] {
 }
 
 @media (prefers-color-scheme: dark) {
+
   section,
   footer,
   section[class*="section" i],
@@ -79,5 +80,3 @@ main[class*="mainContainer" i] {
     background-color: rgba(10, 10, 10, 0.85) !important;
   }
 }
-
-

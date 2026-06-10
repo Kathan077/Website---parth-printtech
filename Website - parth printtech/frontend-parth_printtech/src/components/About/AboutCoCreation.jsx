@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./AboutCoCreation.module.css";
@@ -112,7 +113,7 @@ const caseStudies = [
           <line x1="70" y1="70" x2="70" y2="150" stroke="rgba(0,159,227,0.3)" strokeWidth="1" strokeDasharray="1 3" />
           <line x1="125" y1="70" x2="125" y2="150" stroke="rgba(0,159,227,0.3)" strokeWidth="1" strokeDasharray="1 3" />
           <line x1="180" y1="70" x2="180" y2="150" stroke="rgba(0,159,227,0.3)" strokeWidth="1" strokeDasharray="1 3" />
-          
+
           <text x="150" y="115" fill="#009fe3" fontSize="8" fontFamily="monospace" textAnchor="middle">VERTICAL FLUTES</text>
         </g>
       </svg>
@@ -176,7 +177,7 @@ const CaseStudyCard = ({ study }) => {
       <div className={styles.content}>
         <span className={styles.category}>{study.category}</span>
         <h3 className={styles.cardTitle}>{study.title}</h3>
-        
+
         <div className={styles.detailBlock}>
           <h4 className={styles.sectionHeader}>THE CHALLENGE</h4>
           <p className={styles.descText}>{study.challenge}</p>
@@ -195,6 +196,10 @@ const CaseStudyCard = ({ study }) => {
             </div>
           ))}
         </div>
+
+        <Link href={`/contact?subject=Inquiry for ${study.title}`} className={styles.learnMoreBtn}>
+          Learn More
+        </Link>
       </div>
     </div>
   );
@@ -239,6 +244,11 @@ const AboutCoCreation = () => {
         }
       );
     }, containerRef);
+
+    // Refresh triggers to ensure scroll offset calculations align with home page layout elements
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 150);
 
     return () => ctx.revert();
   }, []);

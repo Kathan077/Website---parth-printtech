@@ -1,5 +1,6 @@
 .section {
-  background-color: #ffffff; /* Clean light mode section background */
+  background-color: #ffffff;
+  /* Clean light mode section background */
   padding: 120px 40px;
   overflow: hidden;
   position: relative;
@@ -15,7 +16,7 @@
   height: 100%;
   pointer-events: none;
   z-index: 1;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(0, 159, 227, 0.02) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 159, 227, 0.02) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -89,14 +90,30 @@
 
 /* Case Study Card */
 .card {
-  background-color: #ffffff; /* Light card background */
+  background-color: #ffffff;
+  /* Light card background */
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 20px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr 1.1fr; /* Image left, content right */
+  grid-template-columns: 1fr 1.1fr;
+  /* Image left, content right */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
   transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:nth-child(even) {
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.card:nth-child(even) .visualFrame {
+  order: 2;
+  border-right: none;
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card:nth-child(even) .content {
+  order: 1;
 }
 
 .card:hover {
@@ -108,7 +125,8 @@
 
 /* Left Panel: Visual Toggle Frame */
 .visualFrame {
-  background-color: #fafbfc; /* Light grey interior for viewport */
+  background-color: #fafbfc;
+  /* Light grey interior for viewport */
   position: relative;
   padding: 40px;
   display: flex;
@@ -165,7 +183,8 @@
   align-items: center;
 }
 
-.dielineContainer, .imageContainer {
+.dielineContainer,
+.imageContainer {
   width: 100%;
   height: 100%;
   display: flex;
@@ -223,12 +242,17 @@
 
 .category {
   font-family: var(--font-geist-mono), monospace;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #009fe3;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #ffffff;
+  background-color: #009fe3;
+  padding: 6px 12px;
+  border-radius: 4px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  width: fit-content;
+  box-shadow: 0 4px 10px rgba(0, 159, 227, 0.15);
 }
 
 .cardTitle {
@@ -296,7 +320,10 @@
 /* Registration overlay markers */
 .registrationOverlay {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 1;
 }
@@ -311,14 +338,22 @@
   opacity: 0.2;
 }
 
-.regMark::before, .regMark::after {
+.regMark::before,
+.regMark::after {
   content: "";
   position: absolute;
   background-color: #009fe3;
 }
 
-.regMark::before { width: 100%; height: 1px; }
-.regMark::after { width: 1px; height: 100%; }
+.regMark::before {
+  width: 100%;
+  height: 1px;
+}
+
+.regMark::after {
+  width: 1px;
+  height: 100%;
+}
 
 .regMarkCircle {
   width: 10px;
@@ -334,18 +369,59 @@
   .title {
     font-size: 3.2rem;
   }
+
   .cardTitle {
     font-size: 1.8rem;
   }
+
   .content {
     padding: 40px;
   }
 }
 
+.learnMoreBtn {
+  margin-top: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border: 1.5px solid #1e293b;
+  color: #1e293b;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: transparent;
+  transition: all 0.3s ease;
+  width: fit-content;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.learnMoreBtn:hover {
+  background-color: #009fe3;
+  border-color: #009fe3;
+  color: #ffffff;
+  box-shadow: 0 6px 15px rgba(0, 159, 227, 0.2);
+}
+
 @media (max-width: 992px) {
   .card {
-    grid-template-columns: 1fr; /* Stack vertically inside card */
+    grid-template-columns: 1fr !important;
+    /* Stack vertically inside card */
   }
+
+  .card:nth-child(even) .visualFrame {
+    order: initial;
+    border-left: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .card:nth-child(even) .content {
+    order: initial;
+  }
+
   .visualFrame {
     border-right: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -356,15 +432,19 @@
   .section {
     padding: 80px 20px;
   }
+
   .title {
     font-size: 2.4rem;
   }
+
   .description {
     font-size: 1.1rem;
   }
+
   .content {
     padding: 30px;
   }
+
   .specsList {
     grid-template-columns: 1fr;
     gap: 15px;
