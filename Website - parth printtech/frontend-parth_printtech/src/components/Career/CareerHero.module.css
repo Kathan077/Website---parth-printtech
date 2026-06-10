@@ -514,48 +514,5 @@
   }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .heroSection {
-    background-color: transparent;
-  }
-  .title,
-  .statVal {
-    color: #f1f5f9;
-  }
-  .subtitle {
-    color: #94a3b8;
-  }
-  .description {
-    color: #cbd5e1;
-  }
-  .statLabel {
-    color: #94a3b8;
-  }
-  .diagramCard {
-    background-color: rgba(15, 23, 42, 0.7);
-    border-color: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-  }
-  .cardBigNumber {
-    color: #f1f5f9;
-  }
-  .cardBigNumberSub,
-  .secondCardSub,
-  .secondCardLabel {
-    color: #94a3b8;
-  }
-  .cardListItem {
-    color: #cbd5e1;
-  }
-  .thirdCardText {
-    color: #f1f5f9;
-  }
-  .ctaButtonOutline {
-    border-color: rgba(0, 159, 227, 0.6);
-  }
-  .ctaButtonOutline:hover {
-    background-color: rgba(0, 159, 227, 0.1);
-  }
-}
+
 

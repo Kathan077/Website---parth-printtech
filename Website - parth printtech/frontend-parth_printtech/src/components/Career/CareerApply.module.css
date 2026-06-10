@@ -402,53 +402,6 @@
   }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .title,
-  .formTitle,
-  .successTitle {
-    color: #f1f5f9;
-  }
-  .subtitle {
-    color: #94a3b8;
-  }
-  .description,
-  .formSubtitle,
-  .successDesc {
-    color: #cbd5e1;
-  }
-  .infoValue {
-    color: #f1f5f9;
-  }
-  .formCard {
-    background-color: rgba(15, 23, 42, 0.7);
-    border-color: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  }
-  .fieldLabel {
-    color: #94a3b8;
-  }
-  .fieldInput,
-  .fieldSelect,
-  .fieldTextarea,
-  .fileUpload {
-    background-color: rgba(15, 23, 42, 0.5);
-    border-color: rgba(255, 255, 255, 0.08);
-    color: #f1f5f9;
-  }
-  .fieldInput:focus,
-  .fieldSelect:focus,
-  .fieldTextarea:focus {
-    background-color: rgba(15, 23, 42, 0.8);
-    border-color: #009fe3;
-  }
-  .fileUpload:hover {
-    background-color: rgba(0, 159, 227, 0.05);
-    border-color: #009fe3;
-  }
-  .fileUploadMain {
-    color: #cbd5e1;
-  }
-}
+
 
 

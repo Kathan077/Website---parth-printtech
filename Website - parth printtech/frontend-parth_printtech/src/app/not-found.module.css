@@ -217,33 +217,4 @@
 }
 
 /* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .description {
-    color: #94a3b8;
-  }
-  .headline {
-    color: #f1f5f9;
-  }
-  .code {
-    background: linear-gradient(180deg, #ffffff 0%, #009fe3 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .codeDigit::before {
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 159, 227, 0.15) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .secondaryBtn {
-    background: rgba(15, 23, 42, 0.7);
-    color: #f1f5f9;
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-  .secondaryBtn:hover {
-    background: rgba(0, 159, 227, 0.08);
-    border-color: #009fe3;
-    color: #009fe3;
-  }
-}
+
