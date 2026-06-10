@@ -1,0 +1,404 @@
+.creativeSection {
+  background-color: #f8f9fa; 
+  padding: 0 0 140px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background pattern removed as requested */
+
+/* Interactive Background Label Graphics */
+.interactiveBg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1; /* Below content */
+  overflow: hidden;
+}
+
+.floatShape {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.08;
+  transition: opacity 0.5s ease;
+}
+
+.creativeSection:hover .floatShape {
+  opacity: 0.15; /* Becomes slightly more visible when mouse is over section */
+}
+
+.shape1 {
+  /* Abstract Overlapping Circles (Color Mixing / CMYK Concept) */
+  top: 15%; left: 5%;
+  width: 280px; height: 280px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="30" fill="none" stroke="%23009fe3" stroke-width="1"/><circle cx="60" cy="40" r="30" fill="none" stroke="%23009fe3" stroke-width="1"/><circle cx="50" cy="60" r="30" fill="none" stroke="%23009fe3" stroke-width="1.5"/></svg>');
+}
+
+.shape2 {
+  /* Abstract Minimalist Packaging Box / Outline */
+  bottom: 10%; right: 5%;
+  width: 400px; height: 400px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M 100 20 L 180 60 L 180 140 L 100 180 L 20 140 L 20 60 Z" fill="none" stroke="%23009fe3" stroke-width="1"/><path d="M 100 20 L 100 100 M 20 60 L 100 100 M 180 60 L 100 100" fill="none" stroke="%23009fe3" stroke-width="1"/></svg>');
+  transform: rotate(45deg);
+}
+
+.shape3 {
+  /* Die-cut Label Outline with Dashed lines */
+  top: 50%; left: 45%;
+  width: 300px; height: 300px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="25" width="70" height="50" rx="15" fill="none" stroke="%23009fe3" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="85" cy="50" r="5" fill="%23009fe3"/></svg>');
+  transform: rotate(-15deg);
+}
+
+/* Infinite Tilted Marquee */
+.marqueeContainer {
+  width: 110%; /* Increased to prevent edges showing on rotation */
+  overflow: hidden;
+  background-color: #009fe3;
+  padding: 26px 0;
+  margin-bottom: 90px;
+  margin-left: -5%;
+  transform: rotate(-2deg); 
+  box-shadow: 0 15px 40px rgba(0, 159, 227, 0.25);
+  position: relative;
+  z-index: 5;
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: scrollText 30s linear infinite;
+}
+
+.marquee span {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  padding-right: 50px;
+  letter-spacing: 0.1em;
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.mainGrid {
+  max-width: 1400px; /* Wider container for better breathing room */
+  margin: 0 auto;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Gives text slightly more room so it doesn't wrap awkwardly */
+  gap: 80px; 
+  position: relative;
+  z-index: 2;
+  align-items: center; 
+}
+
+/* Left Content */
+.contentBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subheading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #6c757d;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.blueDot {
+  width: 14px; height: 14px;
+  background-color: #009fe3;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 159, 227, 0.6);
+}
+
+.heading {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 4.8rem; /* Slightly larger again for maximum impact */
+  font-weight: 800; /* Crisp heavy weight */
+  line-height: 1.05;
+  color: #111;
+  margin-bottom: 40px;
+  letter-spacing: -0.04em; /* Tight tracking for modern feel */
+}
+
+/* Elegant, premium accent text using Italic Serif */
+.outlinedText {
+  color: #009fe3; 
+  position: relative;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.descriptionWrapper {
+  max-width: 550px;
+}
+
+.description {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.2rem;
+  color: #495057;
+  line-height: 1.7;
+  margin-bottom: 45px;
+}
+
+.statsContainer {
+  display: flex;
+  gap: 40px;
+}
+
+/* 3D Flip Cards for Stats */
+.flipCard {
+  background-color: transparent;
+  width: 280px;
+  height: 120px;
+  perspective: 1000px;
+  cursor: pointer;
+  border-left: 4px solid rgba(0, 159, 227, 0.2);
+  padding-left: 20px;
+  transition: border-color 0.4s ease, transform 0.4s ease;
+  animation: peekContainer 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes peekContainer {
+  0%, 85% { transform: rotateY(0deg); }
+  92% { transform: rotateY(20deg); } /* Container rocks slightly to tease */
+  100% { transform: rotateY(0deg); }
+}
+
+.flipCard:hover {
+  border-left-color: #009fe3;
+  animation: none; /* Stops the tease when hovering */
+  transform: rotateY(0deg);
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg) !important; /* Forces the complete flip effect to work */
+}
+
+.flipCardFront, .flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flipCardBack {
+  transform: rotateY(180deg);
+}
+
+.flipText {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.2rem;
+  color: #009fe3;
+  font-weight: 800;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.statNum {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #212529;
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-family: var(--font-geist-mono), monospace;
+  color: #6c757d;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+}
+
+/* Right Media Block */
+.mediaBlock {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mediaContainer {
+  position: relative;
+  width: 100%;
+  max-width: 540px; /* Increased to balance with the left text side */
+}
+
+.mediaWrapper {
+  position: relative;
+  width: 100%;
+  height: 650px; /* Increased height to match the text section's height */
+  border-radius: 250px 250px 20px 20px; 
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+  border: 12px solid #ffffff;
+}
+
+.mediaElement {
+  width: 100%;
+  height: 130%; /* Extra height for GSAP parallax */
+  object-fit: cover;
+  /* GSAP handles transform now */
+  filter: grayscale(10%) contrast(1.1);
+}
+
+/* Rotating Circular Badge */
+.badgeWrapper {
+  position: absolute;
+  top: 40px;
+  right: -25px; /* Safely within bounds */
+  width: 150px;
+  height: 150px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.circularText {
+  width: 100%;
+  height: 100%;
+}
+
+.circularText text {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  fill: #009fe3;
+  letter-spacing: 4px;
+}
+
+.badgeCenter {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 159, 227, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Floating Glass Cards */
+.floatCardsContainer {
+  position: absolute;
+  bottom: -30px;
+  left: -40px; /* Safely within bounds */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+}
+
+.floatCard {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 20px 24px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  min-width: 280px;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.floatCard:hover {
+  transform: translateY(-8px) !important;
+}
+
+.cardIcon {
+  background: #ffffff;
+  width: 50px; height: 50px;
+  display: flex;
+  align-items: center; justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 159, 227, 0.1);
+}
+
+.floatCard h5 {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #212529;
+  margin-bottom: 4px;
+}
+
+.floatCard p {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .heading { font-size: 4rem; }
+  .mediaWrapper { height: 550px; max-width: 450px; }
+  .floatCardsContainer { left: -20px; }
+}
+
+@media (max-width: 992px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+  .heading { font-size: 4.5rem; }
+  .descriptionWrapper { max-width: 100%; }
+  .floatCardsContainer { left: 20px; right: 20px; bottom: -80px; }
+  .floatCard { min-width: unset; margin-left: 0 !important; }
+  .mediaBlock { justify-content: center; }
+  .mediaWrapper { border-radius: 200px 200px 20px 20px; }
+}
+
+@media (max-width: 768px) {
+  .creativeSection { padding: 0 0 120px; }
+  .heading { font-size: 3rem; }
+  .marqueeContainer {
+    width: 120%;
+    margin-left: -10%;
+    padding: 8px 0; /* Sleek, thin ribbon padding */
+    margin-bottom: 35px;
+    transform: rotate(-1.5deg);
+  }
+  .marquee span {
+    font-size: 0.85rem; /* Neat and compact uppercase text */
+    padding-right: 25px;
+  }
+  .mediaWrapper { height: 450px; border-radius: 150px 150px 20px 20px; }
+  .badgeWrapper { width: 120px; height: 120px; right: -10px; top: 20px; }
+  .statsContainer { flex-direction: column; gap: 30px; }
+}
