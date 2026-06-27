@@ -13,8 +13,8 @@ const marketsList = [
   {
     id: "food",
     title: "Food Packaging",
-    description: "High-barrier pouches, food-grade certified folding cartons, and premium labels designed to preserve freshness.",
-    products: ["Stand-Up Pouches", "Folding Mono Cartons", "Product Sleeves"],
+    description: "Vibrant moisture-resistant shrink sleeves, stand-up pouch film rolls, and custom-calibrated food container labels.",
+    products: ["Stand-Up Pouches", "Shrink Sleeves", "Contour Labels"],
     accentColor: "#ff7a00",
     icon: (
       <svg viewBox="0 0 64 64" className={styles.paperSvg}>
@@ -33,8 +33,8 @@ const marketsList = [
   {
     id: "beverages",
     title: "Beverages",
-    description: "Waterproof bottle labels, vibrant shrink sleeves, and heavy-duty corrugated crates built to survive condensation.",
-    products: ["Wet Glue Labels", "Shrink Sleeves", "Corrugated Cases"],
+    description: "Waterproof bottle labels, high-shrink sleeves, and BOPP wrap-around labels built to survive condensation and high-speed filling lines.",
+    products: ["Wet Glue Labels", "Shrink Sleeves", "BOPP Wrap-Arounds"],
     accentColor: "#009fe3",
     icon: (
       <svg viewBox="0 0 64 64" className={styles.paperSvg}>
@@ -57,8 +57,8 @@ const marketsList = [
   {
     id: "personal-care",
     title: "Personal Care",
-    description: "Premium cosmetics boxes, hot-stamped metallic labels, and spray container packaging with tactile UV finishes.",
-    products: ["Cosmetics Packaging", "Hot Foil Labels", "Squeeze Tube Labels"],
+    description: "Premium cosmetic labels, hot-stamped metallic sleeves, and squeeze tube labels with tactile UV finishes.",
+    products: ["Cosmetics Labels", "Hot Foil Sleeves", "Squeeze Tube Labels"],
     accentColor: "#e91e63",
     icon: (
       <svg viewBox="0 0 64 64" className={styles.paperSvg}>
@@ -79,8 +79,8 @@ const marketsList = [
   {
     id: "family-care",
     title: "Family Care",
-    description: "Moisture-resistant packaging solutions, carton wraps, and functional boxes for household and hygiene essentials.",
-    products: ["Detergent Cartons", "Wipe Box Sleeves", "Soap Packaging"],
+    description: "Moisture-resistant label solutions, wrap-around films, and tamper-evident shrink bands for household essentials.",
+    products: ["Detergent Labels", "Tamper Bands", "Soap Wraps"],
     accentColor: "#4caf50",
     icon: (
       <svg viewBox="0 0 64 64" className={styles.paperSvg}>
@@ -101,8 +101,8 @@ const marketsList = [
   {
     id: "pharmaceuticals",
     title: "Pharmaceuticals",
-    description: "High-precision commercial offset carton printing, medical boxes, and secure, adhesive-backed instruction labels.",
-    products: ["Medicine Boxes", "Vial Labels", "Instruction Leaflets"],
+    description: "High-precision vial labels, medical container sleeves, and tamper-evident security labels with high-contrast print.",
+    products: ["Vial Labels", "Security Sleeves", "Directional Labels"],
     accentColor: "#00bcd4",
     icon: (
       <svg viewBox="0 0 64 64" className={styles.paperSvg}>
@@ -123,8 +123,8 @@ const marketsList = [
   {
     id: "dairy",
     title: "Dairy Products",
-    description: "Moisture-resistant sleeves, protective cup lids, and temperature-stable packaging solutions tailored for dairy goods.",
-    products: ["Yogurt Cup Lids", "Butter Wraps", "Milk Cartons"],
+    description: "Moisture-resistant shrink sleeves, protective cup lids, and temperature-stable dairy container labels.",
+    products: ["Yogurt Cup Lids", "Butter Wraps", "Dairy Sleeves"],
     accentColor: "#9c27b0",
     icon: (
       <svg viewBox="0 0 64 64" className={styles.paperSvg}>
@@ -159,8 +159,8 @@ const marketsList = [
   {
     id: "paints",
     title: "Paints",
-    description: "Vibrant, chemical-resistant bucket labels and color booklets with industry-leading color calibration.",
-    products: ["Paint Can Labels", "Color Swatch Cards", "Textured Paint Guides"],
+    description: "Vibrant, chemical-resistant bucket labels and heat transfer container graphics with industry-leading color calibration.",
+    products: ["Paint Can Labels", "Heat Transfer Graphics", "Bucket Labels"],
     accentColor: "#f6cf00",
     icon: (
       <svg viewBox="0 0 64 64" className={styles.paperSvg}>
@@ -177,8 +177,8 @@ const marketsList = [
   {
     id: "chemical-fertilizer",
     title: "Chemical & Fertilizer",
-    description: "Moisture-proof sacks, hazard-resistant labeling, and chemical-shielded packaging with razor-sharp warning print.",
-    products: ["Hazard Warning Labels", "Fertilizer Bags", "Chemical Drum Stickers"],
+    description: "Hazard-resistant labeling, chemical-shielded stickers, and heavy-duty container labels with razor-sharp warning print.",
+    products: ["Hazard Warning Labels", "Drum Stickers", "Chemical Resisting Labels"],
     accentColor: "#607d8b",
     icon: (
       <svg viewBox="0 0 64 64" className={styles.paperSvg}>
@@ -190,7 +190,7 @@ const marketsList = [
         <circle cx="44" cy="34" r="3" fill="#f2ebd9" stroke="#1a1a1a" strokeWidth="1.5" />
       </svg>
     ),
-  },
+  }
 ];
 
 const MarketsWeServe = () => {

@@ -24,6 +24,6 @@ export default function Home() {
   );
 }
 export const metadata = {
-  title: "Parth Printing Technology | Packaging & Offset Print",
-  description: "High-precision commercial offset printing, custom mono cartons, corrugated packaging boxes, and rigid visual retail materials.",
+  title: "Parth Printing Technology | Premium Label & Shrink Film Solutions",
+  description: "High-precision label printing and premium shrink sleeve packaging films. Specialized in PVC, PETG, BOPP, HTL, and Plain PVC shrink films.",
 };

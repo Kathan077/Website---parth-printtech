@@ -69,8 +69,8 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/marketplace" className={styles.navLink} onClick={closeMenu}>
-                            Marketplace
+                        <Link href="/markets-we-serve" className={styles.navLink} onClick={closeMenu}>
+                            Markets We Serve
                         </Link>
                     </li>
                     <li>

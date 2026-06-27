@@ -31,7 +31,7 @@
   right: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(0, 159, 227, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 159, 227, 0.06) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(80px);
   pointer-events: none;
@@ -44,7 +44,7 @@
   left: -10%;
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.03) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.04) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(100px);
   pointer-events: none;
@@ -57,6 +57,18 @@
   position: relative;
   overflow: hidden;
   z-index: 2;
+  background: linear-gradient(160deg, #f0f7ff 0%, #e8f4fd 50%, #f8fafc 100%);
+}
+
+/* Canvas background animation fills the hero section */
+.dotsCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .heroLayout {
@@ -136,6 +148,7 @@
   padding: 8px 12px 8px 24px;
   position: relative;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
 }
 
 .searchInner:focus-within {
@@ -206,8 +219,8 @@
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--slate-muted);
-  background-color: #f1f5f9;
-  border: 1px solid transparent;
+  background-color: #ffffff;
+  border: 1px solid var(--slate-border);
   padding: 6px 16px;
   border-radius: 40px;
   cursor: pointer;
@@ -215,13 +228,15 @@
 }
 
 .chipBtn:hover {
-  background-color: #e2e8f0;
+  background-color: #f1f5f9;
   color: var(--slate-dark);
+  border-color: var(--primary-blue);
 }
 
 .chipBtnActive {
-  background-color: var(--slate-dark) !important;
+  background-color: #009fe3 !important;
   color: #ffffff !important;
+  border-color: #009fe3 !important;
 }
 
 /* Floating Mockups Graphics */
@@ -256,21 +271,21 @@
 .floatingMockup {
   position: absolute;
   background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 159, 227, 0.12);
   border-radius: 18px;
   padding: 18px;
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.07), 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06), 0 4px 12px rgba(0, 159, 227, 0.03);
   width: 210px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   transition: all 0.4s ease;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(12px);
 }
 
 .floatingMockup:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.12), 0 4px 14px rgba(0, 159, 227, 0.05);
 }
 
 .mockupGrid {
@@ -386,7 +401,7 @@
   100% { transform: translate(-8px, 12px) rotate(-3deg); }
 }
 
-/* 2. Categories Section (CAD Blueprint Style) */
+/* 2. Categories Section */
 .categoriesSection {
   padding: 100px 0;
   position: relative;
@@ -463,11 +478,165 @@
   gap: 40px;
 }
 
+/* ─── Apple-style Product Card ─── */
+.appleCard {
+  position: relative;
+  display: block;
+  border-radius: 28px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+}
+
+.appleCard:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6),
+              0 0 0 1.5px var(--accent-color);
+}
+
+/* Full-bleed background photo */
+.appleCardPhoto {
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.appleCard:hover .appleCardPhoto {
+  transform: scale(1.07);
+}
+
+/* Gradient overlay — dark at bottom, transparent at top */
+.appleCardOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.35) 45%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  transition: background 0.4s ease;
+}
+
+.appleCard:hover .appleCardOverlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+}
+
+/* Top-left number pill */
+.appleCardNum {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 10;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Bottom frosted glass panel */
+.appleCardPanel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 20px 22px 22px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  transition: backdrop-filter 0.4s ease;
+}
+
+.appleCard:hover .appleCardPanel {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* Badge pill inside panel */
+.appleCardBadge {
+  display: inline-block;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid;
+  padding: 3px 9px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+/* Title */
+.appleCardTitle {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  flex: 1;
+}
+
+/* Arrow CTA */
+.appleCardArrow {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.appleCard:hover .appleCardArrow {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateX(3px);
+}
+
+/* Info column: badge + title stacked vertically */
+.appleCardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+
+
 /* Premium SaaS Card design */
 .categoryCard {
   position: relative;
   background-color: #ffffff;
-  border: 1px solid var(--slate-border);
+  border: 1px solid #e2e8f0;
   border-left: 4px solid transparent;
   border-radius: 24px;
   padding: 32px;
@@ -475,13 +644,13 @@
   flex-direction: column;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .categoryCard:hover {
   transform: translateY(-6px);
   border-left-color: var(--accent-color);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.07);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
 }
 
 /* Category Visualizer frame - unique gradient bg per card */
@@ -662,7 +831,7 @@
   font-family: var(--font-montserrat), sans-serif;
   font-size: 1.45rem;
   font-weight: 800;
-  color: var(--slate-dark);
+  color: #0f172a;
   margin: 0;
   line-height: 1.25;
 }
@@ -685,16 +854,16 @@
 .categoryDesc {
   font-family: var(--font-geist-sans), sans-serif;
   font-size: 0.88rem;
-  color: var(--slate-muted);
+  color: #475569;
   line-height: 1.6;
   margin: 0;
 }
 
 .categoryBtn {
   margin-top: auto;
-  border: 1.5px solid var(--slate-dark);
+  border: 1.5px solid #0f172a;
   color: #ffffff;
-  background-color: var(--slate-dark);
+  background-color: #0f172a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -770,7 +939,7 @@
 .industryCard:hover {
   transform: translateY(-6px);
   border-color: var(--primary-blue);
-  box-shadow: 0 10px 30px rgba(0, 159, 227, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 159, 227, 0.06);
 }
 
 .industryIconFrame {
@@ -903,7 +1072,7 @@
 
 .sliderCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
   border-color: var(--solution-accent);
 }
 
@@ -963,15 +1132,16 @@
   position: absolute;
   bottom: 12px;
   right: 12px;
-  background-color: #ffffff;
-  border: 1px solid var(--slate-border);
+  background-color: rgba(4, 21, 37, 0.85);
+  border: 1px solid #1e3a5f;
   padding: 3px 8px;
   border-radius: 4px;
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.58rem;
   font-weight: 700;
-  color: var(--slate-muted);
+  color: #009fe3;
   text-transform: uppercase;
+  backdrop-filter: blur(4px);
 }
 
 .sliderCardInfo {

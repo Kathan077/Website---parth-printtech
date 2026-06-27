@@ -12,8 +12,8 @@ if (typeof window !== "undefined") {
 const capabilitiesData = [
   {
     id: "printing",
-    title: "Offset & Flexo Press",
-    description: "High-precision multicolor offset presses ensuring standard-setting color fidelity.",
+    title: "Rotogravure & Flexo Press",
+    description: "High-precision multicolor gravure and CI flexo printing ensuring standard-setting color fidelity on film substrates.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={styles.cardIcon}>
         <rect x="2" y="2" width="20" height="8" rx="2" />
@@ -23,15 +23,15 @@ const capabilitiesData = [
       </svg>
     ),
     specs: [
-      { label: "Machine", value: "Heidelberg Speedmaster" },
-      { label: "Substrates", value: "80 - 450 gsm Cardstock" },
-      { label: "Speed Rate", value: "15,000 sheets / hr" }
+      { label: "Machine", value: "Multi-Station Gravure Press" },
+      { label: "Substrates", value: "PVC, PETG, BOPP, PE Film" },
+      { label: "Speed Rate", value: "300 meters / min" }
     ]
   },
   {
-    id: "diecutting",
-    title: "Die-Cutting & Creasing",
-    description: "Micron-level die-cutting precision to guarantee clean folds and structural rigidity.",
+    id: "slitting",
+    title: "Precision Slitting & Reel Cut",
+    description: "Micron-level slitting precision using circular shear blades to guarantee clean edges on wrap-around labels.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={styles.cardIcon}>
         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.07 7.07l-9.66 9.66a1 1 0 0 1-1.41-1.41l9.66-9.66a6 6 0 0 1 7.07-7.07l-3.77 3.78z" />
@@ -40,15 +40,15 @@ const capabilitiesData = [
       </svg>
     ),
     specs: [
-      { label: "Machine", value: "Bobst Automatic Cutter" },
-      { label: "Accuracy", value: "± 0.1 mm tolerance" },
-      { label: "Max Sheet", value: "1020 x 720 mm" }
+      { label: "Machine", value: "High-Speed Rotary Slitter" },
+      { label: "Accuracy", value: "± 0.1 mm width tolerance" },
+      { label: "Max Width", value: "800 mm Web Width" }
     ]
   },
   {
-    id: "folding",
-    title: "Folding & Gluing",
-    description: "High-speed automated glue lines for crash-lock, straight-line, and double-wall cartons.",
+    id: "seaming",
+    title: "Sleeve Solvent Seaming",
+    description: "High-speed automated seaming machines applying precise solvent adhesive to convert flat film rolls into sleeves.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={styles.cardIcon}>
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
@@ -57,24 +57,24 @@ const capabilitiesData = [
       </svg>
     ),
     specs: [
-      { label: "Machine", value: "High-Speed Folder Gluer" },
-      { label: "Daily Output", value: "120,000 cartons" },
-      { label: "Glue Types", value: "Hot-melt & Cold glue" }
+      { label: "Machine", value: "Automated Sleeve Seamer" },
+      { label: "Daily Output", value: "150,000 meters" },
+      { label: "Adhesive", value: "Ultra-Fast Solvent Weld" }
     ]
   },
   {
     id: "finishing",
-    title: "Special Finishing",
-    description: "Luxury decorative embellishments including foil stamping, blind embossing, and Spot UV.",
+    title: "Special Finishing & Foils",
+    description: "Luxury decorative embellishments including metallic cold foils, matte/gloss varnishes, and spot UV details.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={styles.cardIcon}>
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ),
     specs: [
-      { label: "Processes", value: "Hot Foil / Spot UV / Drip" },
-      { label: "Embossing", value: "Micro-embossed textures" },
-      { label: "Foil Types", value: "Metallic, Holographic" }
+      { label: "Processes", value: "Cold Foil / Spot UV / Matte Varnish" },
+      { label: "Customization", value: "Holographic security patterns" },
+      { label: "Ink System", value: "UV Cured / Solvent Inks" }
     ]
   }
 ];

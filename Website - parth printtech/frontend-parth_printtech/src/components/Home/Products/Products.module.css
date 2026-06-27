@@ -175,8 +175,8 @@
 }
 
 .productImage {
-  object-fit: contain;
-  padding: 40px;
+  object-fit: cover;
+  padding: 0;
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -352,6 +352,6 @@
     border-radius: 24px;
   }
   .productImage {
-    padding: 24px;
+    padding: 0;
   }
 }

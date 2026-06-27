@@ -9,29 +9,29 @@ const slides = [
     id: 1,
     videoSrc: "/videos/VIDEO-1.mp4", 
     title: "High-Precision",
-    titleHighlight: "Offset Printing",
-    subtitle: "Delivering crisp, vivid colors that bring your brand to life with unmatched clarity.",
+    titleHighlight: "Rotogravure & Flexo",
+    subtitle: "Delivering crisp, vivid colors on film rolls with unmatched calibration.",
   },
   {
     id: 2,
     videoSrc: "/videos/VIDEO-2.mp4", 
     title: "Custom ",
-    titleHighlight: "Packaging Solutions",
-    subtitle: "Durable, elegant mono cartons and corrugated boxes designed perfectly for you.",
+    titleHighlight: "Label Solutions",
+    subtitle: "Vibrant shrink sleeves and wrap-around labels custom-calibrated to container shapes.",
   },
   {
     id: 3,
     videoSrc: "/videos/VIDEO-3.mp4", 
     title: "Premium",
-    titleHighlight: "Retail Materials",
-    subtitle: "Rigid visual retail displays crafted to capture attention and elevate your brand.",
+    titleHighlight: "Shrink Films",
+    subtitle: "Plain and printed packaging films engineered to protect and showcase your products.",
   },
   {
     id: 4,
     videoSrc: "/videos/VIDEO-4.mp4", 
     title: "End-to-End",
     titleHighlight: "Excellence",
-    subtitle: "From concept to final print, we ensure top-tier quality at every single step.",
+    subtitle: "From digital calibration to finished sleeve rolls, we ensure top-tier quality.",
   }
 ];
 

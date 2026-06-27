@@ -15,13 +15,13 @@ const stepsData = [
   {
     num: "01",
     id: "cad",
-    title: "Structural CAD & Dieline Design",
-    shortTitle: "CAD & Dieline",
-    tagline: "MICRON-LEVEL BOX ARCHITECTURE",
-    description: "Every package starts with structural integrity. Our CAD specialists engineer custom flat-fold shapes and tuck options, ensuring precise locking mechanisms, thickness tolerance calibration, and toolless assembly.",
+    title: "3D Shrink Dieline Calibration",
+    shortTitle: "Contour & Dieline",
+    tagline: "3D PRE-DISTORTION CAD ENGINEERING",
+    description: "Every contoured sleeve starts with geometry calculation. Our specialists engineer precise flat layouts with pre-distorted artwork using advanced 3D contour simulation. This compensates for bottle curves during heat-shrinkage, ensuring perfectly proportional graphics.",
     stats: [
-      { label: "Tolerance", value: "± 0.05 mm" },
-      { label: "Software", value: "Impact CAD / ArtiosCAD" }
+      { label: "Tolerance", value: "± 0.02 mm" },
+      { label: "Software", value: "Esko Studio / ArtiosCAD" }
     ],
     svg: (
       <svg viewBox="0 0 400 300" className={styles.visualSvg} fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -33,40 +33,37 @@ const stepsData = [
         </defs>
         <rect width="100%" height="100%" fill="url(#cadGrid)" stroke="rgba(0, 159, 227, 0.1)" rx="8" />
 
-        {/* Outer dimensions and cut lines */}
+        {/* Outer dimensions and cut lines for a bottle wrap sleeve */}
         <g stroke="#009fe3" strokeWidth="1.5">
-          {/* Main box layout outlines */}
-          <rect x="120" y="80" width="80" height="120" rx="2" />
-          <rect x="200" y="80" width="80" height="120" rx="2" />
-          {/* Tuck flap top */}
-          <path d="M 120 80 L 130 50 L 190 50 L 200 80" />
-          {/* Tuck flap bottom */}
-          <path d="M 120 200 L 130 230 L 190 230 L 200 200" />
-          {/* Dust flaps side */}
-          <path d="M 120 100 L 100 110 L 100 170 L 120 180" strokeDasharray="3 3" />
-          <path d="M 280 100 L 300 110 L 300 170 L 280 180" strokeDasharray="3 3" />
+          {/* Main sleeve cylinder wrap layout */}
+          <rect x="130" y="70" width="140" height="140" rx="4" />
+          {/* Top neck shrink zone */}
+          <path d="M 130 70 L 150 40 L 250 40 L 270 70" />
+          {/* Bottom base shrink zone */}
+          <path d="M 130 210 L 140 230 L 260 230 L 270 210" />
         </g>
 
-        {/* Crease fold lines (Dashed Red-ish or Accent) */}
-        <g stroke="#e02424" strokeWidth="1" strokeDasharray="4 4" opacity="0.75">
-          <line x1="200" y1="80" x2="200" y2="200" />
-          <line x1="120" y1="80" x2="280" y2="80" />
-          <line x1="120" y1="200" x2="280" y2="200" />
+        {/* Distortion Grid overlay (Crease fold/distortion lines) */}
+        <g stroke="#e02424" strokeWidth="1" strokeDasharray="3 3" opacity="0.75">
+          <line x1="200" y1="40" x2="200" y2="230" />
+          <path d="M 130 110 Q 200 130 270 110" />
+          <path d="M 130 140 Q 200 160 270 140" />
+          <path d="M 130 170 Q 200 190 270 170" />
         </g>
 
         {/* Dimension labels */}
         <g stroke="#888" strokeWidth="0.8">
-          <line x1="120" y1="40" x2="200" y2="40" />
-          <line x1="120" y1="36" x2="120" y2="44" />
-          <line x1="200" y1="36" x2="200" y2="44" />
+          <line x1="130" y1="30" x2="270" y2="30" />
+          <line x1="130" y1="26" x2="130" y2="34" />
+          <line x1="270" y1="26" x2="270" y2="34" />
 
-          <line x1="90" y1="80" x2="90" y2="200" />
-          <line x1="86" y1="80" x2="94" y2="80" />
-          <line x1="86" y1="200" x2="94" y2="200" />
+          <line x1="100" y1="40" x2="100" y2="230" />
+          <line x1="96" y1="40" x2="104" y2="40" />
+          <line x1="96" y1="230" x2="104" y2="230" />
         </g>
-        <text x="160" y="32" fill="#888" fontFamily="monospace" fontSize="9" textAnchor="middle">W: 80.00mm</text>
-        <text x="55" y="145" fill="#888" fontFamily="monospace" fontSize="9" textAnchor="middle">H: 120.00mm</text>
-        <text x="240" y="145" fill="#009fe3" fontFamily="monospace" fontSize="10" fontWeight="bold">DWG // 01-A</text>
+        <text x="200" y="24" fill="#888" fontFamily="monospace" fontSize="9" textAnchor="middle">Layflat: 140.00mm</text>
+        <text x="60" y="140" fill="#888" fontFamily="monospace" fontSize="9" textAnchor="middle">Cut: 190.00mm</text>
+        <text x="200" y="195" fill="#009fe3" fontFamily="monospace" fontSize="10" fontWeight="bold">SLEEVE // DWG-REV01</text>
       </svg>
     )
   },
@@ -75,11 +72,11 @@ const stepsData = [
     id: "color",
     title: "Spectrophotometer Color Sync",
     shortTitle: "Color Sync",
-    tagline: "CMYK HIGHLIGHT CALIBRATION",
-    description: "Digital proofing meets physical reality. We align our offset ink plates through densitometer testing, securing perfect color density matching. Specially mixed Pantone shades are calibrated to delta-E standards under regulated D50 lighting.",
+    tagline: "CMYK REGISTRATION CONTROL",
+    description: "Digital color targets meet physical reality. We align our flexo and rotogravure ink plates through densitometer testing, securing perfect color density matching. Specially mixed Pantone shades are calibrated to Delta-E standards under regulated D50 lighting.",
     stats: [
-      { label: "Color Target", value: "Delta-E < 1.5" },
-      { label: "Standard", value: "ISO 12647-2 (Offset)" }
+      { label: "Color Target", value: "Delta-E < 1.0" },
+      { label: "Standard", value: "ISO 12647-2 (Film/Flexo)" }
     ],
     svg: (
       <svg viewBox="0 0 400 300" className={styles.visualSvg} fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -114,13 +111,13 @@ const stepsData = [
   {
     num: "03",
     id: "press",
-    title: "High-Speed Press Sheet Run",
-    shortTitle: "Press Sheet Run",
-    tagline: "AUTOMATED HIGH-SPEED OFFSET",
-    description: "Our high-capacity Heidelberg Speedmaster presses lock cylinder plates in registry. Paper boards run at speeds up to 15,000 sheets per hour under automatic spectrophotometer adjustments, ensuring continuous color uniformity from the first sheet to the last.",
+    title: "High-Speed Rotary Web Run",
+    shortTitle: "Rotary Press Run",
+    tagline: "HIGH-CAPACITY CYLINDER WEB RUN",
+    description: "Our high-capacity rotogravure and CI flexo presses lock cylinder plates in perfect registry. Polymer/metal plates run at speeds up to 300 meters per minute under automatic inline spectrophotometer adjustments, ensuring continuous color uniformity across miles of web film.",
     stats: [
-      { label: "Output Speed", value: "15,000 sheets / hr" },
-      { label: "Technology", value: "In-line Image Control" }
+      { label: "Output Speed", value: "300 meters / min" },
+      { label: "Technology", value: "Optical Register Control" }
     ],
     svg: (
       <svg viewBox="0 0 400 300" className={styles.visualSvg} fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -133,50 +130,47 @@ const stepsData = [
         <circle cx="270" cy="150" r="35" fill="none" stroke="#e02424" strokeWidth="3" />
         <circle cx="270" cy="150" r="40" stroke="rgba(224, 36, 36, 0.2)" strokeWidth="1" />
 
-        {/* Feeding Paper board sheet passing through rollers */}
+        {/* Continuous Web roll passing through rollers */}
         <path d="M 40 160 L 95 160 C 115 160, 145 130, 165 130 L 235 130 C 255 130, 285 160, 305 160 L 360 160" stroke="#1e293b" strokeWidth="2.5" fill="none" strokeLinecap="round" />
 
         {/* Sheet indicator arrows */}
         <path d="M 60 152 L 70 152 M 65 148 L 72 152 L 65 156" stroke="#009fe3" strokeWidth="1.2" />
         <path d="M 320 152 L 330 152 M 325 148 L 332 152 L 325 156" stroke="#e02424" strokeWidth="1.2" />
 
-        <text x="200" y="70" fill="#1e293b" fontFamily="monospace" fontSize="11" textAnchor="middle" fontWeight="bold">HEIDELBERG SPEEDMASTER FLOW</text>
-        <text x="200" y="210" fill="#888" fontFamily="monospace" fontSize="8" textAnchor="middle">ROTATIONAL SYNC: OK // REGISTRATION: 100%</text>
+        <text x="200" y="70" fill="#1e293b" fontFamily="monospace" fontSize="11" textAnchor="middle" fontWeight="bold">ROTARY ROLL FEED SYSTEM</text>
+        <text x="200" y="210" fill="#888" fontFamily="monospace" fontSize="8" textAnchor="middle">WEB TENSION: SYNCED // REGISTER: 100%</text>
       </svg>
     )
   },
   {
     num: "04",
     id: "finish",
-    title: "Tactile Foil & Die-Cut Crease",
-    shortTitle: "Foil & Die-Cut",
-    tagline: "LUXURY EMBELLISHMENT & SHAPE",
-    description: "The final touch of distinction. High-pressure die-cutters stamp clean folds, lock tabs, and hanger loops with absolute precision. We overlay specialized custom textures: gloss spot UV highlights, deep blind embossing, and metallic foils.",
+    title: "Precision Slitting & Sleeve Seaming",
+    shortTitle: "Sleeve & Roll Finish",
+    tagline: "AUTOMATED CONTINUOUS FORMING",
+    description: "The final step of label creation. High-speed seaming machines apply micro-metered solvent adhesive to join the flat film edges, forming continuous sleeves. Precision rotary slitters then slice wrap-around label rolls to standard widths with clean, non-frayed edges.",
     stats: [
-      { label: "Finishes", value: "Metallic Foil / Spot UV" },
-      { label: "Tolerance", value: "± 0.1 mm accuracy" }
+      { label: "Finishes", value: "Seam Solvent / Reel Slit" },
+      { label: "Accuracy", value: "± 0.15 mm seaming tolerance" }
     ],
     svg: (
       <svg viewBox="0 0 400 300" className={styles.visualSvg} fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect width="100%" height="100%" fill="rgba(0,0,0,0.02)" stroke="rgba(0, 159, 227, 0.1)" rx="8" />
 
-        {/* Luxury Packaging Box Perspective Drawing */}
+        {/* Sleeve Forming Roller & Solvent weld point */}
         <g stroke="#009fe3" strokeWidth="1.2" transform="translate(60, 30)">
-          {/* Top lid */}
-          <polygon points="140,50 200,80 140,110 80,80" fill="rgba(0, 159, 227, 0.05)" />
-          {/* Front face */}
-          <polygon points="80,80 140,110 140,190 80,160" fill="rgba(0, 159, 227, 0.08)" />
-          {/* Side face */}
-          <polygon points="140,110 200,80 200,160 140,190" fill="rgba(0, 159, 227, 0.02)" />
+          {/* Sleeve roll simulation */}
+          <ellipse cx="140" cy="90" rx="30" ry="60" fill="rgba(0, 159, 227, 0.05)" />
+          <path d="M 140 30 L 80 50 L 80 130 L 140 150" fill="rgba(0, 159, 227, 0.08)" />
+          <path d="M 140 30 L 200 50 L 200 130 L 140 150" fill="rgba(0, 159, 227, 0.02)" />
 
-          {/* Embellished Highlight Lines (Gold Foil Sim) */}
-          <polyline points="90,85 135,107 135,180 90,157 90,85" stroke="#eab308" strokeWidth="2" strokeLinecap="round" />
-          <polyline points="145,107 190,85 190,157 145,180 145,107" stroke="#eab308" strokeWidth="2" strokeLinecap="round" />
+          {/* Seaming Weld Line Highlight (Gold Foil Sim) */}
+          <line x1="140" y1="30" x2="140" y2="150" stroke="#eab308" strokeWidth="2.5" strokeLinecap="round" />
         </g>
 
         {/* Text indicators */}
-        <text x="200" y="245" fill="#eab308" fontFamily="monospace" fontSize="9" textAnchor="middle" fontWeight="bold">SPOT UV & HOT FOIL CALIBRATION</text>
-        <text x="200" y="260" fill="#888" fontFamily="monospace" fontSize="8" textAnchor="middle">PRESSURE ACCURACY APPROVED // STAGE 4 COMPLETE</text>
+        <text x="200" y="245" fill="#eab308" fontFamily="monospace" fontSize="9" textAnchor="middle" fontWeight="bold">SOLVENT SEAM WELD CALIBRATION</text>
+        <text x="200" y="260" fill="#888" fontFamily="monospace" fontSize="8" textAnchor="middle">SLEEVE FORMING COMPLETE // STAGE 4 VERIFIED</text>
       </svg>
     )
   }

@@ -13,44 +13,72 @@ if (typeof window !== "undefined") {
 const productsData = [
   {
     id: "01",
-    category: "Folding Cartons",
-    title: "Folding Mono Cartons",
-    description: "Our high-precision custom mono cartons are manufactured from premium duplex board, solid bleached sulfate (SBS), and recycled Kraft paper. Tailored with custom die-cut designs and luxury embellishments, they ensure outstanding shelf-presence and structural protection.",
-    image: "/images/products/mono_cartons.png",
-    accentColor: "#ff7a00",
+    category: "Shrink Sleeves",
+    title: "PVC Shrink Sleeves",
+    description: "Conform your packaging graphics seamlessly to complex container contours. Our high-precision PVC shrink sleeve labels offer 360-degree design coverage, high moisture resistance, and tamper-evident sealing.",
+    image: "/images/products/pvc_shrink_sleeves.png",
+    accentColor: "#009fe3",
     specs: [
-      { label: "Substrate", value: "Duplex / SBS / Kraft Board" },
-      { label: "Print Process", value: "Heidelberg Offset" },
-      { label: "Finishing", value: "Spot UV / Gold Hot Foil" },
-      { label: "Est. MOQ", value: "1,000 Units" }
+      { label: "Substrate", value: "High-Grade PVC Film" },
+      { label: "Shrinkage Rate", value: "Up to 50% - 58%" },
+      { label: "Print Process", value: "Rotogravure / High-Def Flexo" },
+      { label: "Layflat Range", value: "20mm to 350mm" }
     ]
   },
   {
     id: "02",
-    category: "Shipping & Logistics",
-    title: "Corrugated Packaging",
-    description: "Built for durability and tough transit routes, our industrial-grade corrugated boxes utilize high-quality Kraft liners and flutes. Available in various wall structures (3-ply, 5-ply, 7-ply) to secure large heavy goods with maximum crushing resistance.",
-    image: "/images/products/corrugated_boxes.png",
-    accentColor: "#009fe3",
+    category: "Shrink Sleeves",
+    title: "PETG Shrink Sleeves",
+    description: "The pinnacle of shrink label engineering. Made from eco-friendly, recyclable polyester film, these sleeves yield up to 78% shrinkage for heavily contoured containers with absolute clarity.",
+    image: "/images/products/petg_shrink_sleeves.png",
+    accentColor: "#e3007b",
     specs: [
-      { label: "Flute Profile", value: "3-Ply / 5-Ply / 7-Ply Heavy" },
-      { label: "Material", value: "Premium Kraft Liner" },
-      { label: "Print Tech", value: "Flexo / Litho-Laminated" },
-      { label: "Strength Rating", value: "32 ECT to 48 ECT" }
+      { label: "Substrate", value: "Eco-Friendly PETG Polyester" },
+      { label: "Shrinkage Rate", value: "Up to 70% - 78% Max" },
+      { label: "Print Process", value: "Gravure / UV Flexo" },
+      { label: "Sustainability", value: "100% Recyclable" }
     ]
   },
   {
     id: "03",
-    category: "POSM Displays",
-    title: "Rigid Retail Displays",
-    description: "Maximize retail visibility with our custom-engineered Point of Sale displays and structural standees. Crafted from durable sunboard, MDF, and flute sheets, these flat-pack displays assemble without tools to place your brand in the visual spotlight.",
-    image: "/images/products/retail_displays.png",
-    accentColor: "#e91e63",
+    category: "Wrap-Around Labels",
+    title: "BOPP Wrap-Around Labels",
+    description: "Engineered for high-volume, high-speed rotary labeling lines. Our roll-fed BOPP labels offer superior water resistance and high gloss/matte clarity, ideal for carbonated drinks and bottled water.",
+    image: "/images/products/bopp_label.png",
+    accentColor: "#ffd400",
     specs: [
-      { label: "Structure", value: "Custom Die-Cut Standee" },
-      { label: "Materials", value: "Flute-sheet / MDF / Sunboard" },
-      { label: "Print Tech", value: "High-Res Direct UV" },
-      { label: "Assembly", value: "Flat-Pack / Toolless" }
+      { label: "Substrate", value: "BOPP (Clear, White, Metallic)" },
+      { label: "Film Thickness", value: "35 to 50 Microns" },
+      { label: "Print Process", value: "CI Wide-Web Flexo" },
+      { label: "Adhesive Match", value: "Hot-Melt Glue System" }
+    ]
+  },
+  {
+    id: "04",
+    category: "Heat Transfer Labels",
+    title: "Heat Transfer Labels (HTL)",
+    description: "Experience permanent dry-fusion graphic decoration. Using heat and pressure, graphics bond directly to containers, achieving a seamless 'no-label' look with high chemical and scratch resistance.",
+    image: "/images/products/htl_label_rolls.png",
+    accentColor: "#111111",
+    specs: [
+      { label: "Carrier Film", value: "Coated PET Carrier Foil" },
+      { label: "Ink System", value: "UV Cured / Scratch-Proof" },
+      { label: "Fusion Temp", value: "130°C to 180°C" },
+      { label: "Container Types", value: "PE, PP, PET, PS, Glass" }
+    ]
+  },
+  {
+    id: "05",
+    category: "Shrink Film",
+    title: "Plain PVC Shrink Film",
+    description: "Premium unprinted PVC shrink film rolls for manual or automated wrapping, offering superior clarity, uniform shrinkage, and strong seals.",
+    image: "/images/products/pvc_lamination_films.png",
+    accentColor: "#4f46e5",
+    specs: [
+      { label: "Substrate", value: "Premium Grade Plain PVC" },
+      { label: "Shrinkage Rate", value: "Up to 50% - 55%" },
+      { label: "Format", value: "Rolls / Centerfold" },
+      { label: "Appearance", value: "Super Clear / High Gloss" }
     ]
   }
 ];

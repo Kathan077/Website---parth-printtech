@@ -67,14 +67,14 @@ const AboutHero = () => {
           {/* Left Block: Modern Typography & Copy */}
           <div className={styles.contentBlock}>
             <span className={`${styles.subtitle} hero-text-reveal`}>
-              <span className={styles.blueDot}></span> RE-IMAGINING PACKAGING
+              <span className={styles.blueDot}></span> RE-IMAGINING LABEL PRINTING
             </span>
             <h1 className={`${styles.title} hero-text-reveal`}>
-              Precision In Every Fold,
-              <span className={styles.accentText}>Color & Detail</span>
+              Precision In Every Print,
+              <span className={styles.accentText}>Film & Sleeve</span>
             </h1>
             <p className={`${styles.description} hero-text-reveal`}>
-              Since 2015, Parth Printtech has engineered custom packaging and commercial print products that bridge structural integrity with high-fidelity color execution. We turn raw card stock into tactile brand experiences.
+              Since 2015, Parth Printtech has engineered premium shrink sleeve labels and high-performance packaging films that bridge vivid color execution with precise calibration. We transform flat film rolls into brand-defining label solutions.
             </p>
 
             <div className={`${styles.ctaWrapper} hero-text-reveal`}>
@@ -103,7 +103,7 @@ const AboutHero = () => {
                 <div className={styles.wireframeBorder}></div>
                 <img
                   src="/images/Who_We_Are.jpg"
-                  alt="Precision offset printing press"
+                  alt="Rotogravure printing press in action"
                   className={styles.collageImg}
                 />
               </div>
@@ -112,22 +112,22 @@ const AboutHero = () => {
               <div className={`${styles.collageCard} ${styles.secondaryCard} collage-item`}>
                 <div className={styles.wireframeBorder}></div>
                 <img
-                  src="/images/products/luxury_gift_boxes.png"
-                  alt="Luxury Packaging Box"
+                  src="/images/products/bopp_label.png"
+                  alt="BOPP Wrap-Around Labels"
                   className={styles.collageImg}
                 />
-                <span className={styles.blueprintCode}>DWG-04-R</span>
+                <span className={styles.blueprintCode}>SLV-04-R</span>
               </div>
 
               {/* Image 3: Small Accent Card (Bottom / Left Offset) */}
               <div className={`${styles.collageCard} ${styles.tertiaryCard} collage-item`}>
                 <div className={styles.wireframeBorder}></div>
                 <img
-                  src="/images/products/mono_cartons.png"
-                  alt="Mono Carton Packaging"
+                  src="/images/products/pvc_shrink_sleeves.png"
+                  alt="PVC Shrink Sleeves"
                   className={styles.collageImg}
                 />
-                <span className={styles.blueprintCode}>CUT-01</span>
+                <span className={styles.blueprintCode}>SLV-01</span>
               </div>
 
             </div>

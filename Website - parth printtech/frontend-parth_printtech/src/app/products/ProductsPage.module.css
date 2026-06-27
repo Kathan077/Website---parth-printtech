@@ -110,26 +110,86 @@
   gap: 40px;
 }
 
-/* CAD Blueprint Card design */
+/* ─── Keyframe Animations ─── */
+@keyframes cardBorderGlow {
+  0%   { opacity: 0.5; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes shimmerSweep {
+  0%   { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(250%) skewX(-15deg); }
+}
+
+@keyframes floatIdle {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes badgePulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255,255,255,0.5); }
+  70%  { box-shadow: 0 0 0 8px rgba(255,255,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+
+@keyframes shineSweep {
+  0%   { left: -75%; }
+  100% { left: 130%; }
+}
+
+@keyframes chipFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Ecommerce-style Card */
 .card {
   position: relative;
   background-color: #ffffff;
-  border: 1px solid rgba(0, 159, 227, 0.1);
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: 24px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.45s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Animated gradient border ring */
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Glowing border via ::before pseudo-element */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 26px;
+  background: conic-gradient(
+    from 180deg,
+    var(--accent, #009fe3) 0deg,
+    transparent 60deg,
+    transparent 300deg,
+    var(--accent, #009fe3) 360deg
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: none;
+}
+
+.card:hover::before {
+  opacity: 1;
+  animation: cardBorderGlow 2s ease-in-out infinite;
 }
 
 .card:hover {
-  border-color: var(--accent-color);
-  box-shadow: 0 20px 40px rgba(0, 159, 227, 0.08), 0 0 0 1px var(--accent-color);
-  transform: translateY(-4px);
-  transition: border-color 0.45s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.15),
+              0 0 40px rgba(var(--accent-rgb, 0,159,227), 0.12);
 }
+
 
 /* Blueprint marker line at bottom of active card */
 .blueprintMarkLine {
@@ -199,26 +259,11 @@
 }
 
 .frameGrid {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  opacity: 0.04;
-  background-image: 
-    linear-gradient(to right, #009fe3 1px, transparent 1px),
-    linear-gradient(to bottom, #009fe3 1px, transparent 1px);
-  background-size: 16px 16px;
-  z-index: 1;
+  display: none;
 }
 
-/* Registration Crosshair */
 .crosshair {
-  position: absolute;
-  top: 15px; right: 15px;
-  width: 16px; height: 16px;
-  border: 1px solid #cbd5e1;
-  border-radius: 50%;
-  opacity: 0.3;
-  z-index: 2;
-  transition: all 0.4s ease;
+  display: none;
 }
 .crosshair::before, .crosshair::after {
   content: "";
@@ -273,8 +318,8 @@
 }
 
 .productImage {
-  object-fit: contain;
-  padding: 24px;
+  object-fit: cover;
+  padding: 0;
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.3s ease;
 }
 
@@ -394,32 +439,193 @@
   color: #334155;
 }
 
-/* Call-to-action quote button */
-.quoteBtn {
-  margin-top: auto;
-  border: 2px solid #0f172a;
-  color: #0f172a;
-  background: transparent;
+/* ─── Ecommerce Card Sections ─── */
+
+/* Top colored gradient image area */
+.cardImageArea {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px;
-  border-radius: 12px;
-  font-family: var(--font-montserrat), system-ui, sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
-  text-decoration: none;
-  cursor: pointer;
+  overflow: hidden;
 }
 
-.card:hover .quoteBtn {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: #ffffff;
-  box-shadow: 0 8px 24px rgba(0, 159, 227, 0.2);
+/* Shimmer sweep light over image area on hover */
+.cardImageArea::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
+
+.card:hover .cardImageArea::after {
+  opacity: 1;
+  animation: shimmerSweep 0.9s ease forwards;
+}
+
+/* Number badge top-right — pulsing ring animation */
+.cardNumBadge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 5;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: 0.03em;
+  animation: badgePulse 2.5s ease-out infinite;
+}
+
+/* Image wrapper — idle float + hover lift */
+.cardImageWrapper {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  z-index: 2;
+  filter: drop-shadow(0 12px 24px rgba(0,0,0,0.18));
+  animation: floatIdle 4s ease-in-out infinite;
+  transition: filter 0.4s ease;
+}
+
+.card:hover .cardImageWrapper {
+  animation: none;
+  transform: translateY(-10px) scale(1.07);
+  filter: drop-shadow(0 20px 36px rgba(0,0,0,0.28));
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.4s ease;
+}
+
+.cardImage {
+  object-fit: contain;
+}
+
+/* White info panel at bottom */
+.cardInfoPanel {
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+  flex: 1;
+}
+
+/* Title */
+.cardTitle {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* Chips — stagger fade-in animation */
+.cardChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cardChip {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+  animation: chipFadeIn 0.5s ease both;
+}
+
+.cardChip:nth-child(1) { animation-delay: 0.05s; }
+.cardChip:nth-child(2) { animation-delay: 0.12s; }
+
+/* Description */
+.cardDesc {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* CTA row */
+.cardCta {
+  margin-top: 4px;
+}
+
+/* Button with shine sweep on hover */
+.cardBtn {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 13px 20px;
+  border-radius: 14px;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s ease;
+}
+
+/* Shine sweep ::after */
+.cardBtn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.35) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.cardBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+}
+
+.cardBtn:hover::after {
+  animation: shineSweep 0.65s ease forwards;
+}
+
 
 /* Plate Filters for Product detail page */
 .filterC {

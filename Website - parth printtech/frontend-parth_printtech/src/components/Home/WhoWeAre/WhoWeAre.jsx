@@ -79,14 +79,6 @@ const WhoWeAre = () => {
   return (
     <section ref={sectionRef} className={styles.creativeSection}>
 
-      {/* Infinite Tilted Marquee */}
-      <div className={styles.marqueeContainer}>
-        <div className={styles.marquee}>
-          <span>PARTH PRINTTECH • INNOVATION IN PRINTING • CUSTOM PACKAGING SOLUTIONS • </span>
-          <span>PARTH PRINTTECH • INNOVATION IN PRINTING • CUSTOM PACKAGING SOLUTIONS • </span>
-        </div>
-      </div>
-
       <div className={styles.mainGrid}>
 
         {/* Left Side: Massive Typography & Content */}

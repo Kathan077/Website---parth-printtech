@@ -13,109 +13,72 @@ if (typeof window !== "undefined") {
 
 const caseStudies = [
   {
-    id: "luxury-box",
-    category: "Luxury Packaging",
-    title: "Magnetic Rigid Presentation Box",
-    challenge: "Lid closure misalignment and bubble gaps in wrapping 1200gsm rigid greyboard laminates.",
-    solution: "Configured CNC routing tables to groove precise 90° V-cuts. Structured dual N52 neodymium magnets directly into die-cut board cavities before hand-wrapping with premium textured paper.",
+    id: "pvc-sleeve",
+    category: "Shrink Sleeves",
+    title: "360° Contour Calibration Sleeve",
+    challenge: "Graphic distortion and uneven shrinkage on highly contoured cosmetic spray bottles during heat tunnel runs.",
+    solution: "Created pre-distorted dielines using advanced 3D simulation software. Calibrated localized shrinkage zones on premium PVC film to match container geometry perfectly without smiling or frowning.",
     specs: [
-      { label: "Substrate", value: "1200gsm Rigid Board" },
-      { label: "Closure", value: "Dual N52 Magnets" },
-      { label: "Tolerance", value: "± 0.25 mm" }
+      { label: "Substrate", value: "High-Shrink PVC Film" },
+      { label: "Shrinkage", value: "Up to 58% Uniform" },
+      { label: "Print Process", value: "10-Color Rotogravure" }
     ],
-    image: "/images/products/luxury_gift_boxes.png",
+    image: "/images/products/pvc_shrink_sleeves.png",
     dielineSvg: (
       <svg viewBox="0 0 300 220" fill="none" stroke="#009fe3" strokeWidth="1.2">
         <rect width="100%" height="100%" fill="rgba(0, 159, 227, 0.03)" stroke="rgba(0, 159, 227, 0.15)" rx="6" />
-        {/* Base */}
-        <rect x="80" y="70" width="80" height="80" strokeDasharray="3 3" />
-        {/* Sides */}
-        <rect x="80" y="30" width="80" height="40" />
-        <rect x="80" y="150" width="80" height="40" />
-        <rect x="40" y="70" width="40" height="80" />
-        <rect x="160" y="70" width="40" height="80" />
-        {/* Flap Lid */}
-        <rect x="200" y="70" width="60" height="80" />
-        {/* Magnet points */}
-        <circle cx="240" cy="95" r="4" fill="#eab308" stroke="#eab308" />
-        <circle cx="240" cy="125" r="4" fill="#eab308" stroke="#eab308" />
-        <text x="120" y="115" fill="#009fe3" fontSize="8" fontFamily="monospace" textAnchor="middle">BASE</text>
-        <text x="230" y="115" fill="#eab308" fontSize="7" fontFamily="monospace" textAnchor="middle">LID FLAP</text>
-        <text x="240" y="85" fill="#eab308" fontSize="5" fontFamily="monospace" textAnchor="middle">MAGNET N52</text>
+        {/* Sleeve profile */}
+        <path d="M 110 30 Q 150 40 190 30 L 190 190 Q 150 180 110 190 Z" />
+        <path d="M 110 70 Q 150 80 190 70" />
+        <path d="M 110 110 Q 150 120 190 110" />
+        <path d="M 110 150 Q 150 160 190 150" />
+        <text x="150" y="115" fill="#009fe3" fontSize="8" fontFamily="monospace" textAnchor="middle">DISTORTION GRID</text>
       </svg>
     )
   },
   {
-    id: "pharma-carton",
-    category: "Pharmaceuticals",
-    title: "Optical Verification Mono Carton",
-    challenge: "Micro glue-line failures during high-speed packaging lines leading to carton popping and line stoppage.",
-    solution: "Integrated automated cold-glue extrusion systems equipped with computerized inline optical sensors. Real-time scanning immediately triggers pneumatic ejection of cartons with deviation.",
+    id: "bopp-label",
+    category: "Wrap-Around Labels",
+    title: "High-Speed Web BOPP Labeling",
+    challenge: "Adhesive smearing and label misalignment on high-volume rotary hot-melt labeling lines at 45,000 bottles/hour.",
+    solution: "Engineered ultra-flat, high-tensile BOPP film rolls with moisture-resistant coatings. Calibrated thickness variance down to ±1 micron to prevent line jams and ensure crisp wrap registry.",
     specs: [
-      { label: "Material", value: "300gsm SBS Bleached Board" },
-      { label: "Validation", value: "Optical Glue Scanning" },
-      { label: "Line Speed", value: "120,000 units / hr" }
+      { label: "Substrate", value: "BOPP Clear Film" },
+      { label: "Line Speed", value: "45,000 bottles / hr" },
+      { label: "Thickness", value: "38 Microns" }
     ],
-    image: "/images/products/mono_cartons.png",
+    image: "/images/products/bopp_label.png",
     dielineSvg: (
       <svg viewBox="0 0 300 220" fill="none" stroke="#009fe3" strokeWidth="1.2">
         <rect width="100%" height="100%" fill="rgba(0, 159, 227, 0.03)" stroke="rgba(0, 159, 227, 0.15)" rx="6" />
-        {/* Flat folding dieline of carton */}
-        <g transform="translate(10, 0)">
-          <rect x="50" y="50" width="50" height="120" />
-          <rect x="100" y="50" width="50" height="120" />
-          <rect x="150" y="50" width="50" height="120" />
-          <rect x="200" y="50" width="50" height="120" />
-          {/* Glue Tab */}
-          <polygon points="50,50 35,55 35,165 50,170" fill="rgba(224, 36, 36, 0.08)" stroke="#e02424" strokeWidth="1" />
-          {/* Top/Bottom Flaps */}
-          <path d="M 50 50 L 50 25 L 100 25 L 100 50 M 150 50 L 150 25 L 200 25 L 200 50" strokeDasharray="3 3" />
-          <path d="M 50 170 L 50 195 L 100 195 L 100 170 M 150 170 L 150 195 L 200 195 L 200 170" strokeDasharray="3 3" />
-          <text x="42" y="115" fill="#e02424" fontSize="6" fontFamily="monospace" textAnchor="middle" transform="rotate(-90 42 115)">GLUE LINE</text>
-          <text x="125" y="115" fill="#009fe3" fontSize="8" fontFamily="monospace" textAnchor="middle">BODY PANEL</text>
-        </g>
+        {/* Roll profile */}
+        <rect x="50" y="50" width="200" height="120" rx="3" />
+        <line x1="50" y1="90" x2="250" y2="90" strokeDasharray="3 3" />
+        <line x1="50" y1="130" x2="250" y2="130" strokeDasharray="3 3" />
+        <text x="150" y="115" fill="#009fe3" fontSize="8" fontFamily="monospace" textAnchor="middle">BOPP ROLL LAYOUT</text>
       </svg>
     )
   },
   {
-    id: "corrugated-shipper",
-    category: "Logistics & Shipping",
-    title: "High-ECT Double-Wall Box",
-    challenge: "Flute crushing and box buckling under high stack load in sea freight containers with elevated humidity.",
-    solution: "Engineered double-wall (5-ply) BC-flute profiles using premium virgin Kraft liners. Re-calibrated paper fiber grain direction vertically to maximize crush resistance.",
+    id: "htl-label",
+    category: "Heat Transfer Labels",
+    title: "Dry-Fusion Lubricant Pail HTL",
+    challenge: "Traditional label peeling and chemical degradation on premium chemical and automotive lubricant jugs.",
+    solution: "Developed premium dry-fusion Heat Transfer Labels (HTL) that bond permanently to HDPE containers under 160°C rollers, forming an indestructible chemical-proof scratch-resistant brand barrier.",
     specs: [
-      { label: "Profile", value: "5-Ply BC Double-Wall" },
-      { label: "Load Rating", value: "ECT-42 (Edge Crush Test)" },
-      { label: "Coating", value: "Water-resistant coating" }
+      { label: "Technology", value: "Heat & Press Fusion" },
+      { label: "Chemical Resist", value: "100% Waterproof" },
+      { label: "Carrier Film", value: "Siliconized PET Foil" }
     ],
-    image: "/images/products/corrugated_boxes.png",
+    image: "/images/products/htl_label_rolls.png",
     dielineSvg: (
       <svg viewBox="0 0 300 220" fill="none" stroke="#009fe3" strokeWidth="1.2">
         <rect width="100%" height="100%" fill="rgba(0, 159, 227, 0.03)" stroke="rgba(0, 159, 227, 0.15)" rx="6" />
-        {/* Standard corrugated flap box laydown */}
-        <g transform="translate(10, 0)">
-          <rect x="40" y="60" width="60" height="100" />
-          <rect x="100" y="60" width="50" height="100" />
-          <rect x="150" y="60" width="60" height="100" />
-          <rect x="210" y="60" width="50" height="100" />
-          {/* Top/Bottom Flaps standard RSC */}
-          <rect x="40" y="20" width="60" height="40" strokeDasharray="2 2" />
-          <rect x="100" y="20" width="50" height="40" strokeDasharray="2 2" />
-          <rect x="150" y="20" width="60" height="40" strokeDasharray="2 2" />
-          <rect x="210" y="20" width="50" height="40" strokeDasharray="2 2" />
-
-          <rect x="40" y="160" width="60" height="40" strokeDasharray="2 2" />
-          <rect x="100" y="160" width="50" height="40" strokeDasharray="2 2" />
-          <rect x="150" y="160" width="60" height="40" strokeDasharray="2 2" />
-          <rect x="210" y="160" width="50" height="40" strokeDasharray="2 2" />
-
-          {/* Flute pattern line indicators */}
-          <line x1="70" y1="70" x2="70" y2="150" stroke="rgba(0,159,227,0.3)" strokeWidth="1" strokeDasharray="1 3" />
-          <line x1="125" y1="70" x2="125" y2="150" stroke="rgba(0,159,227,0.3)" strokeWidth="1" strokeDasharray="1 3" />
-          <line x1="180" y1="70" x2="180" y2="150" stroke="rgba(0,159,227,0.3)" strokeWidth="1" strokeDasharray="1 3" />
-
-          <text x="150" y="115" fill="#009fe3" fontSize="8" fontFamily="monospace" textAnchor="middle">VERTICAL FLUTES</text>
-        </g>
+        {/* HTL Pail print layout */}
+        <polygon points="90,40 210,40 190,180 110,180" />
+        <path d="M 100 80 L 200 80" strokeDasharray="2 2" />
+        <path d="M 105 120 L 195 120" strokeDasharray="2 2" />
+        <text x="150" y="105" fill="#009fe3" fontSize="8" fontFamily="monospace" textAnchor="middle">PAIL GRAPHIC ZONE</text>
       </svg>
     )
   }

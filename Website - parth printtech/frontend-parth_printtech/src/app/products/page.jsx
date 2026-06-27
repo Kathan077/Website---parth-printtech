@@ -13,7 +13,7 @@ const ProductsPage = () => {
   const containerRef = useRef(null);
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const categories = ["All", "Folding Cartons", "Logistics & Shipping", "Luxury & Labels", "POSM Displays"];
+  const categories = ["All", "Shrink Sleeves", "Wrap-Around Labels", "Heat Transfer Labels", "Shrink Film"];
 
   const filteredProducts = activeCategory === "All"
     ? productsData
@@ -72,34 +72,24 @@ const ProductsPage = () => {
             ))}
           </div>
 
-          {/* Creative Blueprint Grid Layout */}
+          {/* Product Cards Grid */}
           <div className={styles.grid}>
             {filteredProducts.map((prod) => (
-              <div key={prod.id} className={`${styles.card} prod-card-reveal`} style={{ "--accent-color": prod.accentColor }}>
-                
-                {/* Registration corner marks & index line */}
-                <div className={styles.blueprintMarkLine}></div>
-                
-                {/* Header CAD spec block */}
-                <div className={styles.cadHeader}>
-                  <span className={styles.cadIndex}>[ {prod.num} {"//"} SPEC ]</span>
-                  <span className={styles.cadReg}>{prod.regMark}</span>
-                </div>
+              <div key={prod.id} className={`${styles.card} prod-card-reveal`} style={{ "--accent": prod.accentColor }}>
 
-                {/* Technical visualizer frame */}
-                <div className={styles.imageFrame}>
-                  {/* Grid overlay & crosshair mark */}
-                  <div className={styles.frameGrid}></div>
-                  <div className={styles.crosshair}></div>
-                  <div className={styles.dimensionLabel}>{prod.dim}</div>
+                {/* ── Top: Colored gradient image section ── */}
+                <div className={styles.cardImageArea} style={{ background: `linear-gradient(145deg, ${prod.accentColor}22 0%, ${prod.accentColor}44 100%)` }}>
+                  {/* Wishlist / badge top-right */}
+                  <span className={styles.cardNumBadge}>{prod.num}</span>
 
-                  <div className={styles.imageWrapper}>
+                  {/* Product image — floating centered */}
+                  <div className={styles.cardImageWrapper}>
                     <Image
                       src={prod.image}
                       alt={prod.title}
                       fill
-                      className={styles.productImage}
-                      sizes="(max-width: 768px) 100vw, 30vw"
+                      className={styles.cardImage}
+                      sizes="(max-width: 768px) 100vw, 28vw"
                       onError={(e) => {
                         e.target.src = "data:image/svg+xml;utf8,<svg viewBox='0 0 400 300' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' fill='%23fafbfc'/><text x='50%' y='50%' font-family='sans-serif' font-size='16' fill='%236c757d' text-anchor='middle'>PARTH PRINTTECH</text></svg>";
                       }}
@@ -107,35 +97,35 @@ const ProductsPage = () => {
                   </div>
                 </div>
 
-                {/* Info blocks */}
-                <div className={styles.infoBlock}>
-                  <div className={styles.titleRow}>
-                    <span className={styles.categoryLabel}>{prod.category}</span>
-                    <h3 className={styles.cardTitle}>{prod.title}</h3>
+                {/* ── Bottom: White info panel ── */}
+                <div className={styles.cardInfoPanel}>
+                  {/* Title */}
+                  <h3 className={styles.cardTitle}>{prod.title}</h3>
+
+                  {/* Category chip */}
+                  <div className={styles.cardChips}>
+                    <span className={styles.cardChip} style={{ color: prod.accentColor, borderColor: prod.accentColor + "55", backgroundColor: prod.accentColor + "11" }}>
+                      {prod.category}
+                    </span>
+                    <span className={styles.cardChip} style={{ color: "#64748b", borderColor: "#e2e8f0" }}>
+                      {prod.dim}
+                    </span>
                   </div>
+
+                  {/* Short description */}
                   <p className={styles.cardDesc}>{prod.description}</p>
-                </div>
 
-                {/* Specification CAD metadata table */}
-                <div className={styles.specsContainer}>
-                  <div className={styles.specsHeader}>CALIBRATION PARAMETERS</div>
-                  <div className={styles.specsList}>
-                    {prod.specs.slice(0, 4).map((spec, sIdx) => (
-                      <div key={sIdx} className={styles.specItem}>
-                        <span className={styles.specLabel}>{spec.label}</span>
-                        <span className={styles.specValue}>{spec.value}</span>
-                      </div>
-                    ))}
+                  {/* CTA row */}
+                  <div className={styles.cardCta}>
+                    <Link href={`/products/${prod.id}`} className={styles.cardBtn} style={{ backgroundColor: prod.accentColor === "#111111" ? "#1e293b" : prod.accentColor }}>
+                      View Details →
+                    </Link>
                   </div>
                 </div>
-
-                {/* View Details Link */}
-                <Link href={`/products/${prod.id}`} className={styles.quoteBtn}>
-                  <span>More Details & Calibration →</span>
-                </Link>
               </div>
             ))}
           </div>
+
         </div>
       </main>
       <Footer />

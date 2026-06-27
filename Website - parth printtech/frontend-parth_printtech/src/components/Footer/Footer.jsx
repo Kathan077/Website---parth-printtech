@@ -35,7 +35,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className={styles.brandDesc}>
-              Architects of custom packaging prototypes and high-precision offset commercial printing. Delivering premium duplex cartons, labels, and corrugated shipping solutions globally.
+              Architects of premium shrink sleeve labels and high-performance packaging films. Delivering custom PVC, PETG, BOPP, and Heat Transfer Labels globally.
             </p>
             {/* CMYK Registration marks decoration */}
             <div className={styles.registrationMarks}>
@@ -73,19 +73,19 @@ const Footer = () => {
             <h4 className={styles.colTitle}>Solutions</h4>
             <ul className={styles.linksList}>
               <li>
-                <span className={styles.staticLink}>Folding Mono Cartons</span>
+                <span className={styles.staticLink}>PVC Shrink Sleeves</span>
               </li>
               <li>
-                <span className={styles.staticLink}>Corrugated Packaging</span>
+                <span className={styles.staticLink}>PETG Shrink Sleeves</span>
               </li>
               <li>
-                <span className={styles.staticLink}>Rigid Luxury Boxes</span>
+                <span className={styles.staticLink}>BOPP Wrap-Around Labels</span>
               </li>
               <li>
-                <span className={styles.staticLink}>PVC, PETG, BOPP & HTL Labels</span>
+                <span className={styles.staticLink}>Heat Transfer Labels (HTL)</span>
               </li>
               <li>
-                <span className={styles.staticLink}>Flexible Packaging Pouches</span>
+                <span className={styles.staticLink}>Plain PVC Shrink Film</span>
               </li>
             </ul>
           </div>

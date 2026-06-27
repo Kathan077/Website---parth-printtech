@@ -1,6 +1,6 @@
 .heroWrapper {
   width: 100%;
-  background-color: #0a0f1e;
+  background-color: #001a40;
 }
 
 .heroInner {
@@ -9,7 +9,7 @@
   height: 100vh;
   min-height: 650px;
   overflow: hidden;
-  background-color: #0a0f1e; 
+  background-color: #001a40; 
 }
 
 .slide {
@@ -19,6 +19,7 @@
   width: 100%;
   height: 100%;
   opacity: 0;
+  background-color: #001a40;
   /* Gentle scale out effect as it fades in */
   transform: scale(1.08);
   transition: opacity 1.2s cubic-bezier(0.7, 0, 0.3, 1), transform 4s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -33,17 +34,18 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.9);
+  filter: brightness(0.95) saturate(1.15);
+  opacity: 0.7; /* Show video 70% */
 }
 
-/* Beautiful dynamic gradient overlay */
+/* Beautiful proper blue transparent filter overlay */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(10, 15, 30, 0.5) 0%, rgba(10, 15, 30, 0.9) 100%);
+  background: radial-gradient(circle at center, rgba(0, 110, 255, 0.3) 0%, rgba(0, 15, 45, 0.75) 100%);
   z-index: 3;
 }
 
@@ -88,12 +90,12 @@
 
 .titleHighlight {
   display: block;
-  color: #009fe3;
-  text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  color: #009fe3; /* Solid brand cyan/blue font color */
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   font-family: inherit; /* Inherits the same font as title */
   font-style: normal;
   font-weight: 900;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em; /* Sleek, premium letter spacing */
 }
 
 .subtitle {

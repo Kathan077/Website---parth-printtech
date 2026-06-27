@@ -13,7 +13,7 @@ const valuesList = [
   {
     id: 1,
     title: "Precision Quality",
-    description: "Every print dot, fold line, and custom box is manufactured under strict tolerance guidelines using next-generation color profiling.",
+    description: "Every print dot, seaming line, and custom sleeve is manufactured under strict tolerance guidelines using next-generation color profiling.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
@@ -28,7 +28,7 @@ const valuesList = [
   {
     id: 2,
     title: "Advanced Technology",
-    description: "We invest in world-class Heidelberg offset presses and automated packaging machinery to achieve unmatched output speeds and consistency.",
+    description: "We invest in world-class rotogravure and CI flexo presses and automated sleeve seaming machinery to achieve unmatched output speeds and consistency.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2v2" />
@@ -46,7 +46,7 @@ const valuesList = [
   {
     id: 3,
     title: "Eco-Friendly Print",
-    description: "Committed to sustainable forestry sourcing, soy-based inks, chemical-free plate processing, and 100% recyclable mono cartons.",
+    description: "Committed to sustainable film sourcing, eco-friendly ink systems, and 100% recyclable polyester (PETG) shrink sleeves.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.58 1 9.8A7 7 0 0 1 11 20z" />
@@ -58,7 +58,7 @@ const valuesList = [
   {
     id: 4,
     title: "Custom Craftsmanship",
-    description: "From custom structural prototyping to high-end embellishments like foil stamping and spot UV coatings, we realize your brand's unique vision.",
+    description: "From custom pre-distortion graphic calibration to high-end embellishments like cold foil stamping and tactile spot UV coatings, we realize your brand's unique vision.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />

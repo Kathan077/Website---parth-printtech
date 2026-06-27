@@ -1,6 +1,6 @@
 .creativeSection {
   background-color: #f8f9fa; 
-  padding: 0 0 140px;
+  padding: 100px 0 140px;
   overflow: hidden;
   position: relative;
 }
@@ -385,19 +385,8 @@
 }
 
 @media (max-width: 768px) {
-  .creativeSection { padding: 0 0 120px; }
+  .creativeSection { padding: 60px 0 120px; }
   .heading { font-size: 3rem; }
-  .marqueeContainer {
-    width: 120%;
-    margin-left: -10%;
-    padding: 8px 0; /* Sleek, thin ribbon padding */
-    margin-bottom: 35px;
-    transform: rotate(-1.5deg);
-  }
-  .marquee span {
-    font-size: 0.85rem; /* Neat and compact uppercase text */
-    padding-right: 25px;
-  }
   .mediaWrapper { height: 450px; border-radius: 150px 150px 20px 20px; }
   .badgeWrapper { width: 120px; height: 120px; right: -10px; top: 20px; }
   .statsContainer { flex-direction: column; gap: 30px; }
